@@ -1,0 +1,19 @@
+LICHTPUNT – EERSTE PROEFWEBSITE
+
+Bestanden:
+- index.html: startpagina
+- studie.html: voorbeeld van een Bijbelstudie
+- styles.css: vormgeving
+- script.js: navigatie en voorbeeld van aanmelden/registreren
+- assets/lichtpuntje-voorbeeld.png: voorbeeldafbeelding (door gebruiker aangeleverd)
+
+BEKIJKEN
+Open index.html in Chrome, Edge of een andere browser. De website heeft geen internet nodig, behalve om de externe ChatGPT-link te openen.
+
+BELANGRIJK
+Dit is een statische proefversie, nog niet online gepubliceerd. De knoppen voor aanmelden/registreren laten alleen zien hoe het straks eruitziet. Er wordt geen gebruikersaccount aangemaakt en niets opgeslagen. Voor echte aanmelding is later een beveiligde server-/authenticatiedienst nodig, met een privacyverklaring. Zet nooit zelf wachtwoorden in de HTML of browseropslag.
+
+De website heeft geen maandelijkse AI-kosten; privévragen openen voorlopig ChatGPT apart. Gratis ChatGPT-gebruik kan limieten hebben.
+
+VOLGENDE STAP
+Eerst samen de vormgeving bekijken en verbeteren; daarna kiezen we een gratis hostingroute en een veilige gratis ledenoplossing binnen de beschikbare gebruikslimieten.
