@@ -1,19 +1,29 @@
-LICHTPUNT – EERSTE PROEFWEBSITE
+LICHTPUNT – PROEFWEBSITE V2 · 1 PETRUS 2:1–12
 
-Bestanden:
-- index.html: startpagina
-- studie.html: voorbeeld van een Bijbelstudie
-- styles.css: vormgeving
-- script.js: navigatie en voorbeeld van aanmelden/registreren
-- assets/lichtpuntje-voorbeeld.png: voorbeeldafbeelding (door gebruiker aangeleverd)
+De website is al online via GitHub Pages: https://lichtpunt-belgie.github.io/
 
-BEKIJKEN
-Open index.html in Chrome, Edge of een andere browser. De website heeft geen internet nodig, behalve om de externe ChatGPT-link te openen.
+WAT IS NIEUW?
+- bijbelstudies.html: overzicht van alle lessen
+- studie-dag-1.html t/m studie-dag-5.html: uitgebreide lessen
+- studie.html: dag 6, bijgewerkt naar dezelfde indeling
+- index.html: overzicht met zes studiedagen op de startpagina
+- styles.css: vormgeving van de extra onderdelen
 
-BELANGRIJK
-Dit is een statische proefversie, nog niet online gepubliceerd. De knoppen voor aanmelden/registreren laten alleen zien hoe het straks eruitziet. Er wordt geen gebruikersaccount aangemaakt en niets opgeslagen. Voor echte aanmelding is later een beveiligde server-/authenticatiedienst nodig, met een privacyverklaring. Zet nooit zelf wachtwoorden in de HTML of browseropslag.
+BEHOUD DEZELFDE MAPPENSTRUCTUUR BIJ HET UPLOADEN:
+  index.html, bijbelstudies.html, studie.html, studie-dag-1.html t/m studie-dag-5.html,
+  styles.css, script.js, LEESMIJ.txt en assets/lichtpuntje-voorbeeld.png
 
-De website heeft geen maandelijkse AI-kosten; privévragen openen voorlopig ChatGPT apart. Gratis ChatGPT-gebruik kan limieten hebben.
+ZO WERK JE DE ONLINE SITE BIJ:
+1. Pak het nieuwe ZIP-bestand eerst uit in Windows (niet openen vanuit ZIP).
+2. Ga naar https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
+3. Kies Bestand toevoegen > Bestanden uploaden.
+4. Sleep ALLE uitgepakte bestanden en de map assets naar GitHub.
+5. Controleer dat index.html, styles.css en de nieuwe studiepagina's aanwezig zijn.
+6. Kies Commit wijzigingen. De site wordt daarna automatisch vernieuwd.
 
-VOLGENDE STAP
-Eerst samen de vormgeving bekijken en verbeteren; daarna kiezen we een gratis hostingroute en een veilige gratis ledenoplossing binnen de beschikbare gebruikslimieten.
+Let op: bestaande bestanden op GitHub worden door deze versies vervangen.
+Er worden geen wachtwoorden of persoonlijke gegevens opgeslagen. De registratieknop is nog een demo. Privévragen openen ChatGPT apart. GitHub Pages is openbare, statische hosting en is niet geschikt als persoonlijke ledendatabase.
+
+Bron van de Griekse teksteditie: SBL Greek New Testament (Michael W. Holmes, 2010), https://sblgnt.com/ – CC BY 4.0. De Nederlandse Bijbelverzen zijn eigen voorlopige werkvertalingen, niet afkomstig uit de HSV. Raadpleeg gerust ook je eigen Bijbel.
+
+Footer: Ontwikkeld door PM Business Support in samenwerking met ChatGPT.
