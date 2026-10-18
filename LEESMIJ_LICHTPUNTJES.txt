@@ -1,0 +1,31 @@
+LICHTPUNT — DAGELIJKSE LICHTPUNTJES (19–25 OKTOBER 2026)
+
+Inhoud: alleen gewijzigde of nieuwe bestanden.
+- index.html: startpagina, toont vanaf 19 oktober dagelijks de laatste Nederlandse afbeelding.
+- lichtpuntjes.html: archief van verschenen Lichtpuntjes.
+- lichtpuntjes.css en lichtpuntjes.js: vormgeving en automatische dagelijkse zichtbaarheid.
+- assets/lichtpuntje-098-nl.png t/m lichtpuntje-104-nl.png: de 7 Nederlandse afbeeldingen.
+
+ZO PUBLICEREN
+1. Pak het ZIP-bestand helemaal uit.
+2. Open https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io/upload/main
+3. Selecteer alle bestanden en de volledige map 'assets' uit de uitgepakte map naar GitHub. De bestaande assets blijven bestaan, als je de mapinhoud toevoegt.
+4. Klik 'Commit wijzigingen'.
+5. Na enkele minuten open https://lichtpunt-belgie.github.io/ en Ctrl+F5.
+6. Controleer https://lichtpunt-belgie.github.io/lichtpuntjes.html
+
+SCHEMA (lokale datum België)
+19 okt: nr 98 (muziek)
+20 okt: nr 99 (wandelen)
+21 okt: nr 100 (rust)
+22 okt: nr 101 (herinneringen)
+23 okt: nr 102 (samen eten)
+24 okt: nr 103 (lachen)
+25 okt: nr 104 (moed)
+
+LET OP: de themas van 99–104 op de reeds gemaakte afbeeldingen wijken af van de aanvankelijk besproken themalijst. Dit pakket volgt exact de afbeeldingen die nu zijn klaargemaakt, zodat tekst en website overeenkomen.
+
+BELANGRIJK: deze automatische zichtbaarheid gebeurt in de browser. Omdat GitHub-repository en bijlagen publiek zijn, kunnen de afbeeldingen ook eerder rechtstreeks worden opgevraagd. Ze worden niet vóór hun datum op de website getoond. Op een al geopende pagina wordt de publicatiedatum iedere minuut opnieuw bekeken.
+
+Dit pakket verandert NIETS aan de Bijbelstudies, bestaande terugknoppen, of aanmeldingen.
+Engelse Facebook-afbeeldingen zitten NIET in dit pakket; die moeten nog worden gemaakt en afzonderlijk voor Facebook gepland.

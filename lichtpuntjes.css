@@ -1,0 +1,15 @@
+/* Aanvulling op de bestaande Lichtpunt-stijl. Geen aanpassing aan de Bijbelstudies. */
+[hidden]{display:none!important}
+.lp-download { margin-top:13px; align-self:flex-start; font-size:13px; }
+.lp-archive-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}
+.lp-archive-card {background:#fff;border:1px solid #e9e4da;border-radius:20px;overflow:hidden;box-shadow:0 12px 30px #1e494711;display:flex;flex-direction:column;}
+.lp-archive-photo {display:block;background:#f8f3e9;padding:13px;text-align:center;}
+.lp-archive-photo img {max-height:350px; width:100%; object-fit:contain; border-radius:7px;}
+.lp-archive-copy {padding:21px;display:flex;flex-direction:column;flex:1}
+.lp-archive-copy h3 {font-size:24px;margin:8px 0 5px;line-height:1.25}
+.lp-archive-copy p {font-size:14px;color:#586b65;}
+.lp-archive-date {font-size:11px;color:#2e776e;letter-spacing:.07em;text-transform:uppercase;font-weight:800;}
+.lp-archive-copy .button {margin-top:auto;align-self:start;box-shadow:none;font-size:12px;padding:10px 14px}
+.lp-archive-empty {background:#f7f7ed;border:1px solid #e1e8db;border-radius:17px;padding:28px;max-width:660px;}
+@media (max-width:860px) {.lp-archive-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:580px) {.lp-archive-grid{grid-template-columns:1fr;}.lp-archive-photo img{max-height:none;}.lp-archive-copy h3{font-size:23px}.lp-download{width:100%;}.featured-thought .thought-side{padding:22px}}
