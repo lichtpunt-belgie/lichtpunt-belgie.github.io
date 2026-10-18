@@ -1,0 +1,5 @@
+Lichtpunt navigatie-update
+
+Alle binnenpagina’s hebben nu een duidelijke knop Startpagina. Op Bijbelstudies vervalt de oude knop die naar zichzelf terugverwees. Onderliggende studies en levensverhalen hebben ook een knop Alle Bijbelstudies. De online geschriften-pagina heeft nu een duidelijke Startpagina-link. Alle overige teksten, afbeeldingen en bestaande functies zijn behouden.
+
+Upload alle bestanden en de map assets uit deze uitgepakte map naar de hoofdmap van GitHub. Bij bestaande bestandsnamen worden de versies vervangen. Controleer daarna de website met Ctrl+F5.

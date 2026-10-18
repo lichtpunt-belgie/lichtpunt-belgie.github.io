@@ -27,3 +27,16 @@
 @media(max-width:750px){.person-layout{grid-template-columns:1fr}.bio-summary{position:static}.release-guard .release-pending{padding:24px}.weekly-block{margin-top:32px}.weekly-block h2{font-size:25px}}
 
 .history-photo{margin:18px 0 26px}.history-photo img{max-height:420px;width:100%;object-fit:cover;border-radius:14px;object-position:center 44%;background:#e8e8dc}.history-photo figcaption{font-size:12px;line-height:1.6;color:#637a6c;margin-top:8px}
+
+
+/* Lichtpunt: vaste, duidelijke terugnavigatie op binnenpagina's */
+.internal-nav {display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:16px}
+.internal-nav a {text-decoration:none;white-space:nowrap;font-size:14px;font-weight:700;line-height:1.35}
+.internal-nav a:hover,.nav-home-top:hover {color:var(--teal2);text-decoration:underline}
+.internal-nav .nav-home,.nav-home-top {display:inline-flex;align-items:center;justify-content:center;background:#eaf3ee;border:1px solid #c6d9cf;border-radius:9px;color:var(--teal);padding:9px 12px;text-decoration:none}
+@media (max-width: 620px) {
+  .nav-wrap-inner {flex-wrap:wrap;justify-content:flex-start;gap:5px;padding-block:9px}
+  .nav-wrap-inner .internal-nav {width:100%;justify-content:flex-start;gap:12px}
+  .nav-wrap-inner .internal-nav a {font-size:12px}
+  .nav-wrap-inner .internal-nav .nav-home {padding:7px 11px}
+}
