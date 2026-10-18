@@ -27,3 +27,11 @@ Er worden geen wachtwoorden of persoonlijke gegevens opgeslagen. De registratiek
 Bron van de Griekse teksteditie: SBL Greek New Testament (Michael W. Holmes, 2010), https://sblgnt.com/ – CC BY 4.0. De Nederlandse Bijbelverzen zijn eigen voorlopige werkvertalingen, niet afkomstig uit de HSV. Raadpleeg gerust ook je eigen Bijbel.
 
 Footer: Ontwikkeld door PM Business Support in samenwerking met ChatGPT.
+
+
+UITBREIDING ONLINE GESCHRIFTEN
+- Nieuwe pagina geschriften.html, toegankelijk via het hoofdmenu en een blok op de startpagina.
+- Alle externe teksten worden rechtstreeks op originele websites geopend in een nieuw tabblad.
+- Links naar Nederlandstalige Bijbels, HSV, SV, BasisBijbel, Open Vertaling, Thora/Tenach, Koran en Bijbelse grondteksten.
+- Geen beschermde teksten of afbeeldingen overgenomen.
+- Let op: online updates moeten handmatig naar GitHub worden geüpload; deze ZIP is een updatebestand.
