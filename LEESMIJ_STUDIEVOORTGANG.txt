@@ -1,0 +1,36 @@
+LICHTPUNT – BIJBELSTUDIES MET VOORTGANG – 19 OKTOBER 2026
+
+Dit pakket bevat alleen de bestanden die gewijzigd zijn.
+
+Nieuwe onderdelen:
+1. De startpagina toont de twee actuele studieopties (Petrus en Genesis).
+2. Op de Bijbelstudies-pagina kan de bezoeker een les afvinken.
+   Per reeks staat 'X van 7 voltooid' en een voortgangsbalk.
+3. Op elke studiepagina staat onder 'Vraag van de dag' een vakje
+   'Mijn eigen antwoord'. Dit antwoord wordt ALLEEN in de browser
+   van de bezoeker bewaard; er wordt niets doorgestuurd.
+4. Op elke studiepagina kan de bezoeker aanvinken dat die les af is.
+
+BEWAREN:
+- De vinkjes en antwoorden worden opgeslagen in de browser (localStorage).
+- Op een ander toestel/browser is de voortgang niet beschikbaar.
+- Bij wissen van browsergegevens kunnen de gegevens verdwijnen.
+- Wie hetzelfde toestel en dezelfde browser gebruikt, kan notities zien.
+- Er zijn nog steeds GEEN echte accounts of ingezonden vragen.
+
+NIET GEWIJZIGD:
+- De automatische publicatie van de Lichtpuntjes.
+- De zichtbaarheid per publicatiedag van Genesis/Petrus.
+- De downloadknop voor WhatsApp (punt 3 blijft open).
+- De Access/Excel-export (punt 4 blijft open).
+
+GITHUB INSTALLEREN:
+1. ZIP downloaden en 'Alles uitpakken'.
+2. ALLE uitgepakte bestanden selecteren, inclusief styles.css.
+3. Ga naar https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io/upload/main
+4. Sleep de uitgepakte bestanden (NIET het ZIP-bestand) naar GitHub.
+5. Klik 'Commit wijzigingen'. Bestaande bestandsnamen worden bijgewerkt.
+6. Wacht enkele minuten op GitHub Pages. Ververs de pagina met Ctrl+F5.
+
+Controleer https://lichtpunt-belgie.github.io/bijbelstudies.html en klik een vinkje aan.
+Open daarna die studie, vink aan/uit, ga terug: status moet blijven staan.

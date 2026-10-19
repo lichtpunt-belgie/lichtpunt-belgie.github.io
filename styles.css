@@ -40,3 +40,29 @@
   .nav-wrap-inner .internal-nav a {font-size:12px}
   .nav-wrap-inner .internal-nav .nav-home {padding:7px 11px}
 }
+
+/* Lichtpunt: studievoortgang en eigen antwoorden - versie 19 oktober 2026 */
+.progress-privacy-hint {max-width:810px;margin:20px 0 0;padding:13px 17px;background:#ebf3ed;border:1px solid #d3e5d9;border-radius:12px;color:#31584a;font-size:14px}
+.study-progress-summary {display:flex;flex-wrap:wrap;align-items:center;gap:13px;margin:5px 0 19px;padding:11px 17px;border:1px solid #e0e8df;background:#f6faf7;border-radius:12px;font-size:14px;font-weight:700;color:#24574a}
+.study-progress-track {flex:1;max-width:275px;min-width:110px;height:9px;border-radius:99px;background:#dce8df;overflow:hidden}
+.study-progress-fill {display:block;width:0;height:100%;background:#407d69;border-radius:99px;transition:width .25s ease}
+.lesson-progress-item {display:flex;flex-direction:column;min-width:0}
+.lesson-progress-item .lesson-card {width:100%;height:100%;flex:1;border-bottom-left-radius:0;border-bottom-right-radius:0}
+.lesson-progress-mark {display:flex;align-items:center;gap:9px;cursor:pointer;padding:12px 16px;background:#eef5ef;color:#285746;font-size:13px;font-weight:700;border:1px solid #d5e5d8;border-top:0;border-bottom-left-radius:16px;border-bottom-right-radius:16px;min-height:52px}
+.lesson-progress-mark input,.study-completion input {width:19px;height:19px;flex:0 0 auto;accent-color:#1c6650;cursor:pointer}
+.lesson-progress-item.is-complete .lesson-card {border-color:#8ebc9d;background:#fbfefa}
+.lesson-progress-item.is-complete .lesson-progress-mark {background:#dcefe2;border-color:#a7ccb0}
+.my-study-answer {margin:17px 0 0;padding-top:16px;border-top:1px solid #c7dacc}
+.my-study-answer label {display:block;font-weight:700;color:var(--teal);margin-bottom:7px}
+.my-study-answer textarea {display:block;width:100%;max-width:100%;border:1px solid #a9c9ba;border-radius:10px;padding:12px 13px;background:#fffefa;color:var(--ink);font:inherit;line-height:1.6;resize:vertical}
+.my-study-answer .answer-save-note {font-size:12px;color:#45685a;margin:9px 0 6px}
+.answer-clear {border:0;padding:4px 0;background:transparent;color:var(--teal);text-decoration:underline;font-size:13px;font-weight:700}
+.study-completion {margin-top:26px;border:1px solid #bbdbbe;border-radius:14px;background:#eef7ee;padding:17px 19px}
+.study-completion label {display:flex;gap:11px;align-items:center;cursor:pointer;font-size:17px;font-weight:750;color:var(--teal)}
+.study-completion p {font-size:12px!important;color:#507161;margin:7px 0 0 31px}
+.daily-studies {display:grid;gap:12px;margin:15px 0 12px}
+.daily-study-row {display:flex;flex-direction:column;gap:2px;border-radius:12px;padding:13px 15px;background:#fffefa;border:1px solid #d9e5dc}
+.daily-study-series {color:#486b61;font-size:12px;font-weight:750;text-transform:uppercase;letter-spacing:.05em}
+.daily-study-link {color:var(--teal);font-weight:750;font-size:16px;line-height:1.45}
+.daily-study-passage {font-size:13px;color:#667b70}
+@media(max-width:580px){.study-progress-summary{display:block}.study-progress-track{margin-top:9px;max-width:none}.lesson-progress-mark{font-size:14px;padding:13px}.my-study-answer{margin-top:14px}}
