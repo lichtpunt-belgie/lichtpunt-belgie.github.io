@@ -56,7 +56,17 @@ else{noConfig.hidden=true;
    await deleteDoc(doc(db,'users',user.uid,'private','study'));
    await deleteDoc(doc(db,'users',user.uid));
    await deleteUser(user);
-   feedback('Je account en online studiegegevens zijn verwijderd.');
+   // Persoonlijke proefnotities en herstelkopieën van dit account op dit toestel wissen.
+   try {
+    for (const key of Object.keys(localStorage)) {
+     if ((key.startsWith('lichtpunt.proef.notities.gebruiker.') ||
+          key.startsWith('lichtpunt.proef.notities.wachtend.') ||
+          key.startsWith('lichtpunt.proef.answer.backup.')) && key.includes(user.uid)) {
+       localStorage.removeItem(key);
+     }
+    }
+   } catch (_) {}
+   feedback('Je account en online studiegegevens, inclusief notities, zijn verwijderd.');
   }catch(err){feedback('Verwijderen is niet volledig gelukt: '+errorLabel(err)+' Neem indien nodig contact op met Lichtpunt.',true,'profile-feedback');}
  });
 }
