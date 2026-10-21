@@ -1,8 +1,9 @@
-/* Lichtpunt – geïsoleerde proef, versie 2 (21 oktober 2026)
+/* Lichtpunt – geïsoleerde proef, versie 3 (21 oktober 2026)
    Alleen geregistreerde leden synchroniseren. Gastgegevens blijven lokaal.
    Wijzigingen staan eerst in een duurzame lokale wachtrij en worden pas als
    'Online opgeslagen' gemeld na verificatie van de echte servergegevens.
-   Geen realtime-snapshot die een nog niet opgeslagen antwoord kan wissen.
+   Bewaar de zichtbare tekst bij het afvinken mee en vervang tijdens schrijven
+   nooit het antwoordvak door een momentopname van de server.
 */
 import {configured, auth, db} from './firebase-service.js';
 import {onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
@@ -88,7 +89,10 @@ async function uploadChanges() {
     }
     remote = clean(snapshot.data());
     const remaining = removeVerified(activeId, patch);
-    progress?.applyCloud(activeId, blend(remote, remaining));
+    // Geen applyCloud na een schrijfbewerking! Daardoor kon een opgeslagen
+    // servermomentopname een recenter (of nog niet meegestuurd) antwoord
+    // in het zichtbare tekstvak overschrijven zodra men het vinkje zette.
+    // Het lokale formulier blijft tijdens bewerken de bron van waarheid.
     success = true;
     status(isEmpty(remaining)
       ? '✓ Online opgeslagen en gecontroleerd · Alleen toegankelijk via jouw account.'
@@ -108,6 +112,13 @@ window.addEventListener('lichtpunt:studychange', event => {
   const pending = readPending(userId);
   pending[change.field][change.id] = change.field === 'done'
     ? Boolean(change.value) : String(change.value).slice(0, 5000);
+  if (change.field === 'done' && document.body?.dataset.studyId === change.id) {
+    // Een vinkje mag nooit een reeds getypt antwoord wissen. Stuur daarom
+    // bij het aanvinken meteen ook de ACTUELE inhoud van dit antwoordvak mee.
+    // De schrijfbevestiging controleert vervolgens beide serverwaarden.
+    const answer = document.querySelector('[data-personal-answer]');
+    if (answer) pending.answers[change.id] = answer.value.slice(0, 5000);
+  }
   if (!storePending(userId, pending)) {
     status('⚠️ Dit toestel kan wijzigingen niet veilig bewaren. Kopieer je antwoord.');
     return;
