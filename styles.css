@@ -66,3 +66,22 @@
 .daily-study-link {color:var(--teal);font-weight:750;font-size:16px;line-height:1.45}
 .daily-study-passage {font-size:13px;color:#667b70}
 @media(max-width:580px){.study-progress-summary{display:block}.study-progress-track{margin-top:9px;max-width:none}.lesson-progress-mark{font-size:14px;padding:13px}.my-study-answer{margin-top:14px}}
+
+/* Proefcorrectie 22/10: houd het hoofdmenu overzichtelijk op verschillende schermen. */
+@media (min-width:1201px){
+ .site-header .nav-wrap:not(.nav-wrap-inner){width:min(1460px,calc(100% - 44px));}
+ .site-header .site-nav{flex-wrap:nowrap;gap:12px;}
+ .site-header .site-nav a:not(.button){font-size:13px;white-space:nowrap;}
+ .site-header .site-nav .button{white-space:nowrap;}
+}
+@media (min-width:801px) and (max-width:1200px){
+ .site-header .nav-wrap:not(.nav-wrap-inner) .menu-toggle{display:block;}
+ .site-header .nav-wrap:not(.nav-wrap-inner) .site-nav{
+   display:none;position:absolute;top:86px;left:0;right:0;background:var(--paper);
+   padding:20px 24px 26px;box-shadow:0 16px 25px #00000011;
+   border-top:1px solid var(--line);flex-direction:column;align-items:stretch;
+ }
+ .site-header .nav-wrap:not(.nav-wrap-inner) .site-nav.open{display:flex;}
+ .site-header .nav-wrap:not(.nav-wrap-inner) .site-nav a:not(.button){text-align:left;font-size:16px;padding:6px 0;}
+}
+.trial-banner{padding:8px 15px;text-align:center;background:#fff1c8;color:#674b11;border-bottom:1px solid #ead5a0;font-size:13px;font-weight:650;line-height:1.5;}
