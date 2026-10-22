@@ -1,0 +1,7 @@
+/* Welkomstbericht: enkel op de startpagina en na een nieuwe versie. */
+.nieuws-overlay:not([hidden]){position:fixed;inset:0;z-index:5000;background:rgba(20,37,34,.70);display:flex;align-items:center;justify-content:center;padding:16px;overflow-y:auto}
+.nieuws-modal{width:min(100%,610px);max-height:calc(100vh - 32px);overflow-y:auto;position:relative;background:#fffdf7;color:#25483f;border-radius:18px;padding:clamp(22px,4vw,38px);box-shadow:0 14px 60px rgba(0,0,0,.27)}
+.nieuws-modal h2{font-size:clamp(1.55rem,3vw,2rem);margin:8px 0 14px}.nieuws-modal p{line-height:1.6}
+.nieuws-modal ul{padding-left:23px;line-height:1.7;margin:16px 0}.nieuws-modal li{margin-bottom:9px}.nieuws-fine{font-size:.94rem;color:#586a64}
+.nieuws-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.nieuws-close{border:0;background:transparent;position:absolute;right:14px;top:12px;font-size:30px;cursor:pointer;color:#264a40;padding:4px 12px}
+[hidden]{display:none!important}

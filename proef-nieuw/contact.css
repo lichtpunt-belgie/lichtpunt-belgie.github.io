@@ -1,0 +1,6 @@
+/* Alleen aanvullingen voor de contactpagina; de bestaande site-stijl blijft leidend. */
+.contact-panel { max-width: 780px; margin: 0 auto 2.5rem; }
+.contact-panel h2:not(:first-child) { margin-top: 2rem; }
+.contact-address { font-size: clamp(1.05rem, 2.1vw, 1.45rem); font-weight: 700; overflow-wrap: anywhere; }
+.contact-address a { color: #184c4b; }
+.contact-hint { font-size: .95rem; opacity: .85; }

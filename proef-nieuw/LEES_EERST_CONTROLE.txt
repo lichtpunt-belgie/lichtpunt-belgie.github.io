@@ -1,0 +1,41 @@
+LICHTPUNT BELGIË – WEBSITE UPDATE 22 OKTOBER 2026
+STATUS: VOORBEREIDING – NOG NIET PUBLICEREN
+
+Inhoud:
+- Alle HTML-pagina’s bijgewerkt met menunaam 'Geloof & Levensbeschouwing'.
+- Aparte persoonlijke notities voor bestaande studiedagen, 12 per dag.
+- Firebase-account en synchronisatie met dezelfde projectconfiguratie als proef.
+- Correctie voor accountverwijdering met lokale opschoning.
+- Nieuw welkomstscherm bij eerste bezoek per versie (index.html).
+- Concept privacy.html met officieel contactadres; inhoud nog te controleren.
+
+BELANGRIJK:
+1. DIT PAKKET IS NOG NIET VOOR PUBLIEKE PUBLICATIE.
+   Contactadres is ingevuld en tweerichtingsmail is door de beheerder getest.
+   De privacytekst moet nog inhoudelijk en juridisch worden gecontroleerd.
+2. Controleer het volledige pakket op een afzonderlijke proefomgeving
+   met TWEE TESTACCOUNTS. Test alle studies, afmelden,
+   lokale opslag zonder account en account verwijderen.
+3. Bewaarde proeftest-notities in Firebase zijn per user/studiedag gedeeld
+   met de toekomstige site. Testaccounts na de proef eventueel verwijderen.
+4. VOOR DEZE LOKALE TEST zijn de ontbrekende opmaakbestanden,
+   scripts en afbeeldingen toegevoegd uit eerdere Lichtpunt-pakketten.
+   Daarmee werkt de vormgeving bij lokaal openen van index.html.
+   Dit betekent NIET dat de hele site officieel getest is.
+   BIJ PUBLICATIE moet nog gecontroleerd worden of de bestaande
+   GitHub-bestanden nieuwer zijn dan de kopie in dit pakket.
+5. Nieuwe pagina contact.html met het werkende mailadres:
+   lichtpuntbelgie.contact@gmail.com.
+   Contactlink toegevoegd aan navigatie/voetteksten.
+6. Koranstudie over Al-Hoedjoeraat 49:13 is gepland voor zondag 25 oktober,
+   maar NIET opgenomen in dit pakket: broncontrole en redactie nog nodig.
+
+Technische beveiliging: Firestore Rules moeten uitsluitend toegang tot
+users/{auth.uid}/private/study toestaan (en eigen profiel).
+Gebruik nooit een Firebase service-account of wachtwoord in de openbare repo.
+
+LOKAAL BEKIJKEN:
+Dubbelklik index.html en controleer de vormgeving.
+De online registratie/Firebase kun je niet betrouwbaar testen
+via een lokaal bestand (file://), maar pas via een testsite.
+Niets op GitHub overschrijven voordat dit is goedgekeurd.
