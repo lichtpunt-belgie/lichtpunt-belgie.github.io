@@ -49,25 +49,45 @@ else{noConfig.hidden=true;
  $('logout').addEventListener('click',async()=>{try{await signOut(auth);feedback('Je bent afgemeld.',false,'profile-feedback');}catch(err){feedback(errorLabel(err),true,'profile-feedback');}});
  $('delete-account').addEventListener('click',async()=>{
   const user=auth.currentUser;if(!user)return;
-  if(!confirm('Je account én alle online opgeslagen antwoorden en vinkjes worden definitief verwijderd. Wil je doorgaan?'))return;
-  const pw=prompt('Vul voor de veiligheid je wachtwoord opnieuw in (wordt niet opgeslagen):');if(!pw)return;
+  if(working)return;
+  if(!confirm('LET OP: je verliest je online antwoorden, studievinkjes en notities definitief. Download eerst alle notities die je wilt bewaren. Wil je echt verdergaan?'))return;
+  const confirmation=prompt('Typ VERWIJDER om te bevestigen dat je dit account definitief wilt verwijderen:');
+  if(confirmation!=='VERWIJDER'){
+   feedback('Verwijderen geannuleerd. Je account en notities blijven behouden.',false,'profile-feedback');return;
+  }
+  const pw=prompt('Vul ter controle je wachtwoord opnieuw in. Dit wordt niet opgeslagen:');if(!pw)return;
+  working=true;feedback('Bezig met verwijderen. Sluit deze pagina nog niet.',false,'profile-feedback');
+  const uid=user.uid;
   try{
+   // Eerst opnieuw aanmelden. Verwijder uitsluitend eigen gegevens, volgens
+   // de Firestore-regels voor users/{uid}/private/study.
    await reauthenticateWithCredential(user,EmailAuthProvider.credential(user.email,pw));
-   await deleteDoc(doc(db,'users',user.uid,'private','study'));
-   await deleteDoc(doc(db,'users',user.uid));
+   await deleteDoc(doc(db,'users',uid,'private','study'));
+   await deleteDoc(doc(db,'users',uid));
    await deleteUser(user);
-   // Persoonlijke proefnotities en herstelkopieën van dit account op dit toestel wissen.
+   // Alle bekende ACCOUNTGEBONDEN lokale kopieën, herstelbestanden en nog
+   // niet verzonden wijzigingen van deze gebruiker op DIT toestel wissen.
+   // Anonieme gastnotities worden bewust niet aangeraakt.
    try {
-    for (const key of Object.keys(localStorage)) {
-     if ((key.startsWith('lichtpunt.proef.notities.gebruiker.') ||
-          key.startsWith('lichtpunt.proef.notities.wachtend.') ||
-          key.startsWith('lichtpunt.proef.answer.backup.')) && key.includes(user.uid)) {
-       localStorage.removeItem(key);
-     }
+    const userKeys=[
+      `lichtpunt.proef.study.user.${uid}.v1`,
+      `lichtpunt.proef.study.pending.${uid}.v1`
+    ];
+    for(const key of Object.keys(localStorage)){
+     const belongsToUser=userKeys.includes(key)||
+       key.startsWith(`lichtpunt.proef.answer.backup.${uid}.`)||
+       key.startsWith(`lichtpunt.proef.notities.gebruiker.${uid}.`)||
+       key.startsWith(`lichtpunt.proef.notities.wachtend.${uid}.`);
+     if(belongsToUser)localStorage.removeItem(key);
     }
    } catch (_) {}
-   feedback('Je account en online studiegegevens, inclusief notities, zijn verwijderd.');
-  }catch(err){feedback('Verwijderen is niet volledig gelukt: '+errorLabel(err)+' Neem indien nodig contact op met Lichtpunt.',true,'profile-feedback');}
+   feedback('Je proefaccount en de online opgeslagen studiegegevens zijn verwijderd. De lokale accountkopieën op dit toestel zijn ook gewist. Als je andere toestellen gebruikte, wis daar eventueel nog de browsergegevens.',false,'account-feedback');
+  }catch(err){
+   // Firebase Authentication en Firestore bieden in deze client-app geen
+   // gezamenlijke alles-of-niets-verwijdering. Bij een gedeeltelijke fout
+   // nooit ten onrechte melden dat alles verdwenen is.
+   feedback('Verwijderen niet volledig afgerond. Het kan zijn dat een deel van de online gegevens al is gewist. '+errorLabel(err)+' Probeer niet meteen opnieuw zonder eerst te controleren.',true,'profile-feedback');
+  }finally{working=false;}
  });
 }
 function errorLabel(err){
@@ -79,6 +99,8 @@ function errorLabel(err){
   'auth/invalid-credential':'Het e-mailadres of wachtwoord klopt niet.',
   'auth/too-many-requests':'Te veel pogingen. Probeer het later opnieuw.',
   'auth/network-request-failed':'Er is geen verbinding. Probeer opnieuw als je internet hebt.',
+  'auth/wrong-password':'Het ingevoerde wachtwoord klopt niet.',
+  'auth/requires-recent-login':'Meld je eerst opnieuw aan en probeer het daarna opnieuw.',
   'permission-denied':'De online opslag heeft geen toegang. Controleer de Firebase-veiligheidsregels.'
  };
  return codes[code]||'Er ging iets mis. Controleer je verbinding of probeer later opnieuw.';
