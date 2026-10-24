@@ -7,7 +7,7 @@
  let userId=null;
  const storageKey=()=>userId?`lichtpunt.study.user.${userId}.v1`:KEY;
  const first='2026-10-19';
- const order=['petrus-begin','petrus-vervolg','genesis-begin'];
+ const order=['petrus-begin','petrus-vervolg','genesis-begin','petrus-derde-reeks','genesis-tweede-reeks','koran-eerste'];
  const schedule={
   'petrus-vervolg':[
     ['Leven met de overheid','1 Petrus 2:13–17'],
@@ -127,6 +127,36 @@
    const container=document.getElementById('daily-studies');
    if(!container)return;
    const today=belgianDate();
+  if(today>='2026-10-26'){
+     const date0=Date.parse('2026-10-26T12:00:00Z');
+     const index2=Math.min(6,Math.max(0,Math.floor((Date.parse(today+'T12:00:00Z')-date0)/86400000)));
+     const future=[
+       ['petrus-derde-reeks','Petrus','petrus-week2-dag'],
+       ['genesis-tweede-reeks','Genesis','genesis-week2-dag']
+     ];
+     const data2={
+       'petrus-derde-reeks':[["Moed wanneer je goed probeert te doen", "1 Petrus 3:13–14"], ["Uitleg geven met zachtheid en respect", "1 Petrus 3:15–17"], ["Een moeilijke passage over lijden en geesten", "1 Petrus 3:18–20"], ["Noach, water en de betekenis van de doop", "1 Petrus 3:20–22"], ["Een nieuwe levensrichting kiezen", "1 Petrus 4:1–3"], ["Buiten de groep staan en anders bekeken worden", "1 Petrus 4:4–6"], ["Gastvrijheid, liefde en ieders bijdrage", "1 Petrus 4:7–11"]],
+       'genesis-tweede-reeks':[["De zevende dag: rust en voltooiing", "Genesis 2:1–3"], ["Twee scheppingsvertellingen naast elkaar", "Genesis 2:4–6"], ["De mens, de aarde en de levensadem", "Genesis 2:7–9"], ["Eden en de vier rivieren", "Genesis 2:10–14"], ["De tuin bewerken én bewaren", "Genesis 2:15–17"], ["Is alleen zijn goed voor de mens?", "Genesis 2:18–20"], ["Een partner: herkenning en verbondenheid", "Genesis 2:21–25"]]
+     };
+     const tag=document.getElementById('today-study-tag');
+     tag.textContent=today>'2026-11-01'?'Studies · laatst verschenen':`Nieuwe studies · ${today.split('-').reverse().join('/')}`;
+     container.replaceChildren();
+     future.forEach(([key,label,prefix])=>{
+       const [name,ref]=data2[key][index2];
+       const row=document.createElement('div');row.className='daily-study-row';
+       const small=document.createElement('span');small.className='daily-study-series';small.textContent=`${label} · vervolg, dag ${index2+1} van 7`;
+       const link=document.createElement('a');link.href=`${prefix}${index2+1}.html`;link.className='daily-study-link';link.textContent=`${name} →`;
+       const detail=document.createElement('span');detail.className='daily-study-passage';detail.textContent=ref;
+       row.append(small,link,detail);container.append(row);
+     });
+     if(!index2){
+       const row=document.createElement('div');row.className='daily-study-row';
+       const small=document.createElement('span');small.className='daily-study-series';small.textContent='Koran · eerste studie';
+       const link=document.createElement('a');link.href='koran-soera49-13.html';link.className='daily-study-link';link.textContent='Elkaar leren kennen, ondanks verschillen →';
+       row.append(small,link);container.append(row);
+     }
+     return;
+  }
    const index=Math.min(6,Math.floor((Date.parse(today+'T12:00:00Z')-Date.parse(first+'T12:00:00Z'))/86400000));
    const titleTag=document.getElementById('today-study-tag');
    if(index<0){

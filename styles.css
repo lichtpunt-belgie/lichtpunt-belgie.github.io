@@ -85,3 +85,6 @@
  .site-header .nav-wrap:not(.nav-wrap-inner) .site-nav a:not(.button){text-align:left;font-size:16px;padding:6px 0;}
 }
 .trial-banner{padding:8px 15px;text-align:center;background:#fff1c8;color:#674b11;border-bottom:1px solid #ead5a0;font-size:13px;font-weight:650;line-height:1.5;}
+
+/* Overzicht Bijbel · Koran · Tora */
+.study-traditions-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.5rem 0}.study-tradition{background:#f5f7f2;border:1px solid #d8e3db;border-radius:18px;padding:1.5rem;display:flex;flex-direction:column;gap:.7rem}.study-tradition h3{margin:0;color:#184c4b;font-size:1.5rem}.study-tradition p{flex:1;margin:0;line-height:1.6}.study-tradition .button{align-self:flex-start;margin-top:.4rem}@media(max-width:800px){.study-traditions-grid{grid-template-columns:1fr}}

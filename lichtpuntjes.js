@@ -4,69 +4,132 @@
 (function () {
   'use strict';
   const posts = [
-  {
-    "number": 98,
-    "date": "2026-10-19",
-    "day": "maandag",
-    "title": "Een liedje kan je dag veranderen",
-    "theme": "Muziek",
-    "description": "Muziek kan herinneringen wakker maken en een gewone dag een nieuwe kleur geven.",
-    "image": "assets/lichtpuntje-098-nl.png"
-  },
-  {
-    "number": 99,
-    "date": "2026-10-20",
-    "day": "dinsdag",
-    "title": "Een kleine wandeling doet meer dan je denkt",
-    "theme": "Buitenlucht",
-    "description": "Even buiten zijn kan helpen om de gedachten tot rust te brengen.",
-    "image": "assets/lichtpuntje-099-nl.png"
-  },
-  {
-    "number": 100,
-    "date": "2026-10-21",
-    "day": "woensdag",
-    "title": "Soms mag je even niets moeten",
-    "theme": "Rust",
-    "description": "Ons honderdste Lichtpuntje: af en toe rust nemen is geen zwakte.",
-    "image": "assets/lichtpuntje-100-nl.png"
-  },
-  {
-    "number": 101,
-    "date": "2026-10-22",
-    "day": "donderdag",
-    "title": "Een oude foto brengt soms warmte terug",
-    "theme": "Herinneringen",
-    "description": "Een oude foto kan een dierbare herinnering opnieuw tot leven brengen.",
-    "image": "assets/lichtpuntje-101-nl.png"
-  },
-  {
-    "number": 102,
-    "date": "2026-10-23",
-    "day": "vrijdag",
-    "title": "Een maaltijd smaakt beter als je ze deelt",
-    "theme": "Samen eten",
-    "description": "Samen eten geeft soms meer dan voeding alleen: aandacht en verbondenheid.",
-    "image": "assets/lichtpuntje-102-nl.png"
-  },
-  {
-    "number": 103,
-    "date": "2026-10-24",
-    "day": "zaterdag",
-    "title": "Lachen maakt een zware dag lichter",
-    "theme": "Humor",
-    "description": "Een glimlach lost niet alles op, maar brengt soms toch een beetje lucht.",
-    "image": "assets/lichtpuntje-103-nl.png"
-  },
-  {
-    "number": 104,
-    "date": "2026-10-25",
-    "day": "zondag",
-    "title": "Nieuwe moed begint vaak heel klein",
-    "theme": "Hoop",
-    "description": "Een nieuwe start kan ontstaan uit iets heel kleins.",
-    "image": "assets/lichtpuntje-104-nl.png"
-  }
+    {
+        "number": 98,
+        "date": "2026-10-19",
+        "day": "maandag",
+        "title": "Een liedje kan je dag veranderen",
+        "theme": "Muziek",
+        "description": "Muziek kan herinneringen wakker maken en een gewone dag een nieuwe kleur geven.",
+        "image": "assets/lichtpuntje-098-nl.png"
+    },
+    {
+        "number": 99,
+        "date": "2026-10-20",
+        "day": "dinsdag",
+        "title": "Een kleine wandeling doet meer dan je denkt",
+        "theme": "Buitenlucht",
+        "description": "Even buiten zijn kan helpen om de gedachten tot rust te brengen.",
+        "image": "assets/lichtpuntje-099-nl.png"
+    },
+    {
+        "number": 100,
+        "date": "2026-10-21",
+        "day": "woensdag",
+        "title": "Soms mag je even niets moeten",
+        "theme": "Rust",
+        "description": "Ons honderdste Lichtpuntje: af en toe rust nemen is geen zwakte.",
+        "image": "assets/lichtpuntje-100-nl.png"
+    },
+    {
+        "number": 101,
+        "date": "2026-10-22",
+        "day": "donderdag",
+        "title": "Een oude foto brengt soms warmte terug",
+        "theme": "Herinneringen",
+        "description": "Een oude foto kan een dierbare herinnering opnieuw tot leven brengen.",
+        "image": "assets/lichtpuntje-101-nl.png"
+    },
+    {
+        "number": 102,
+        "date": "2026-10-23",
+        "day": "vrijdag",
+        "title": "Een maaltijd smaakt beter als je ze deelt",
+        "theme": "Samen eten",
+        "description": "Samen eten geeft soms meer dan voeding alleen: aandacht en verbondenheid.",
+        "image": "assets/lichtpuntje-102-nl.png"
+    },
+    {
+        "number": 103,
+        "date": "2026-10-24",
+        "day": "zaterdag",
+        "title": "Lachen maakt een zware dag lichter",
+        "theme": "Humor",
+        "description": "Een glimlach lost niet alles op, maar brengt soms toch een beetje lucht.",
+        "image": "assets/lichtpuntje-103-nl.png"
+    },
+    {
+        "number": 104,
+        "date": "2026-10-25",
+        "day": "zondag",
+        "title": "Nieuwe moed begint vaak heel klein",
+        "theme": "Hoop",
+        "description": "Een nieuwe start kan ontstaan uit iets heel kleins.",
+        "image": "assets/lichtpuntje-104-nl.png"
+    },
+    {
+        "number": 105,
+        "date": "2026-10-26",
+        "day": "maandag",
+        "title": "Een onverwachte omweg",
+        "theme": "Omwegen",
+        "description": "Soms brengt een onverwachte wending je bij iets moois.",
+        "image": "assets/lichtpuntje-105-nl.png"
+    },
+    {
+        "number": 106,
+        "date": "2026-10-27",
+        "day": "dinsdag",
+        "title": "Kijk eens naar de lucht",
+        "theme": "Rust",
+        "description": "Even omhoogkijken brengt soms rust.",
+        "image": "assets/lichtpuntje-106-nl.png"
+    },
+    {
+        "number": 107,
+        "date": "2026-10-28",
+        "day": "woensdag",
+        "title": "Je mag van mening veranderen",
+        "theme": "Groei",
+        "description": "Nieuwe inzichten krijgen is een teken van blijven leren.",
+        "image": "assets/lichtpuntje-107-nl.png"
+    },
+    {
+        "number": 108,
+        "date": "2026-10-29",
+        "day": "donderdag",
+        "title": "De voldoening van iets afmaken",
+        "theme": "Kleine stappen",
+        "description": "Een kleine taak afronden geeft voldoening.",
+        "image": "assets/lichtpuntje-108-nl.png"
+    },
+    {
+        "number": 109,
+        "date": "2026-10-30",
+        "day": "vrijdag",
+        "title": "Een compliment dat blijft hangen",
+        "theme": "Waardering",
+        "description": "Een oprecht compliment kan iemand lang bijblijven.",
+        "image": "assets/lichtpuntje-109-nl.png"
+    },
+    {
+        "number": 110,
+        "date": "2026-10-31",
+        "day": "zaterdag",
+        "title": "Een dag zonder vast plan",
+        "theme": "Vrijheid",
+        "description": "Een dag met ruimte voor het onverwachte.",
+        "image": "assets/lichtpuntje-110-nl.png"
+    },
+    {
+        "number": 111,
+        "date": "2026-11-01",
+        "day": "zondag",
+        "title": "Wie we missen, blijft in onze herinnering",
+        "theme": "Herinneringen",
+        "description": "Mensen die we missen behouden een plaats in ons verhaal.",
+        "image": "assets/lichtpuntje-111-nl.png"
+    }
 ];
   const options = { timeZone:'Europe/Brussels', year:'numeric', month:'2-digit', day:'2-digit' };
   const firstDay = '2026-10-19';

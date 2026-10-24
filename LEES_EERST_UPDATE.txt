@@ -1,0 +1,5 @@
+LICHTPUNT BELGIE - ALLEEN NIEUWE EN GEWIJZIGDE BESTANDEN (24 oktober 2026)
+
+Dit ZIP-bestand bevat 35 nieuwe of gewijzigde bestanden ten opzichte van de ontvangen GitHub-kopie. Het bevat GEEN ongewijzigde websitebestanden.
+
+Pak het ZIP-bestand uit. De bestanden in de hoofdmap horen in de hoofdmap van de GitHub-repository; de afbeeldingen onder assets/ horen in de bestaande assets-map. Upload pas als de websitecontrole rond is. Bij gelijknamige bestanden worden alleen de 6 noodzakelijke bestaande bestanden vervangen. Maak eerst een back-up of gebruik GitHub-versiegeschiedenis.
