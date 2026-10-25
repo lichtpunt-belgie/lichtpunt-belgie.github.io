@@ -1,0 +1,20 @@
+LICHTPUNT BELGIË – STUDIEBIBLIOTHEEK · VOORBEREID 25 OKTOBER 2026
+
+DIT PAKKET IS NOG NIET ONLINE GEPLAATST. ER IS GEEN GITHUB-AANPASSING UITGEVOERD.
+
+Bevat uitsluitend de nieuwe bibliotheekbladen en twee gewijzigde bestaande pagina’s:
+- index.html (alleen het blok «Lees vanaf het begin» vervangen; link bovenaan behouden)
+- bijbelstudies.html (Blad 1 van de studiebibliotheek)
+- bibliotheek-bijbel.html (Blad 2 – alle 66 Bijbelboeken)
+- bibliotheek-koran.html (Blad 2 – alle 114 soera’s)
+- bibliotheek-tora.html (Blad 2 – de vijf boeken van Mozes)
+- bibliotheek-andere.html (Blad 2 – ruimte voor uitbreiding)
+- bibliotheek-boek-genesis.html, bibliotheek-boek-1-petrus.html en bibliotheek-soera-49.html (voorbeeld van Blad 3)
+- bibliotheek.css en bibliotheek.js (alleen voor de nieuwe bibliotheek)
+- studieoverzicht-archief-24okt2026.html (reservekopie van het vorige overzicht)
+
+De bestaande studiepagina’s, afbeeldingen, accounts en persoonlijke notities zitten NIET in dit pakket en hoeven niet vervangen te worden.
+De bestaande pagina «geschriften.html» blijft behouden; de nieuwe bibliotheek linkt ernaar.
+
+Deze voorbereiding is nog NIET in de browser nagekeken of live getest.
+Publiceer pas na controle op een geschikt moment.

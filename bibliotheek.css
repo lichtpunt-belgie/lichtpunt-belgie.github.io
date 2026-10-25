@@ -1,0 +1,53 @@
+/* Lichtpunt België · nieuwe studiebibliotheek. Geldt alleen voor de nieuwe bibliotheekpagina's. */
+.library-hero{background:linear-gradient(135deg,#f4f7f0,#fffaf2);border-bottom:1px solid #e0e6dc;padding:45px 0 49px}
+.library-hero h1{font-size:clamp(36px,5vw,60px);margin:12px 0 14px;color:#184c4b}
+.library-hero p{max-width:800px;font-size:18px;color:#51695e;margin:0 0 15px}
+.library-promise{font-size:14px;color:#54715e}
+.library-crumbs{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;margin:0 0 24px;color:#5e7368}
+.library-crumbs a{color:#396c60;text-decoration:none}.library-crumbs a:hover{text-decoration:underline}
+.library-section{padding-top:38px;padding-bottom:58px}
+.library-section-heading{margin-bottom:22px}.library-section-heading h2{font-size:clamp(28px,3vw,38px);margin:0 0 5px}.library-section-heading p{color:#596d62;max-width:780px;margin:6px 0}
+.library-main-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.library-main-card{display:flex;gap:19px;text-decoration:none;border:1px solid #dce6df;border-radius:20px;padding:24px;background:#fffefb;box-shadow:0 8px 25px #123f3610;transition:box-shadow .2s,transform .2s}
+.library-main-card:hover{transform:translateY(-3px);box-shadow:0 15px 35px #123f361f}
+.library-icon{border-radius:15px;min-width:60px;height:60px;display:grid;place-items:center;background:#eef5ee;font-size:30px}
+.library-main-card h2{font-size:30px;margin:6px 0 8px;color:#184c4b}.library-main-card p{font-size:15px;color:#526a5c;margin:0 0 12px}.library-forward{font-weight:750;color:#256b5b;font-size:14px}
+.library-infobox{margin:27px 0 0;border-radius:17px;background:#f4f7f2;padding:22px 25px;border:1px solid #dfe8db}
+.library-infobox h2{font-size:25px;margin:0 0 8px}.library-infobox p{margin:4px 0 12px;color:#42574e}
+.library-legend{display:flex;gap:11px;flex-wrap:wrap;margin:10px 0}
+.ls-status{font-size:12px;font-weight:700;border-radius:99px;padding:5px 10px;white-space:nowrap;display:inline-block}
+.is-available{background:#e6f1e9;color:#235944}.is-scheduled{background:#fff1d9;color:#815719}.is-planned{background:#edf0ee;color:#667369}
+.library-toolbar{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin:0 0 18px;background:#f6f8f4;border:1px solid #e1e8de;border-radius:15px;padding:16px}
+.library-toolbar label{font-weight:750;font-size:14px}
+.library-toolbar input{border:1px solid #bbcbbf;border-radius:9px;padding:11px 14px;flex:1;min-width:210px;background:white;color:#243c33}
+.library-count{font-size:13px;margin:0;color:#627569}
+.library-note{font-size:14px;background:#f9f5ec;border-left:4px solid #c6a675;border-radius:5px;padding:14px 18px;margin-bottom:24px;color:#536251}
+.library-directory-group{margin:24px 0 35px}.library-directory-group h2{font-size:30px;margin:0}.library-directory-group>p{color:#718074;margin:0 0 14px}
+.library-entry-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.library-entry{min-height:76px;border:1px solid #e0e7df;border-radius:12px;padding:12px 13px;display:flex;gap:10px;align-items:center;background:#fffdf9;text-decoration:none;color:var(--ink);overflow:hidden}
+.library-entry.is-linked{border-color:#a9cfb8;background:#f6fbf7;box-shadow:0 3px 10px #1b5f3d0b}
+.library-entry.is-linked:hover{border-color:#518d6c;background:#eaf5ed}
+.library-entry-num{display:grid;place-items:center;background:#ecf2ed;border-radius:9px;color:#597269;font-size:12px;font-weight:800;padding:5px 8px;flex:0 0 auto}
+.library-entry-name{min-width:0;flex:1;font-weight:700;font-size:14px;line-height:1.35}
+.library-entry-name small{display:block;font-size:11px;color:#668074;font-weight:400;margin-top:4px}
+.library-entry-status .ls-status{font-size:10px;padding:4px 6px}
+.library-entry-arrow{font-weight:800;color:#26724d;flex:0 0 auto}
+.library-empty{background:#f6f5f0;padding:20px;border-radius:12px}
+.library-lessons{display:grid;gap:10px;margin-top:16px}
+.library-lesson{display:flex;gap:15px;align-items:center;border:1px solid #dfebe1;border-radius:14px;padding:16px 18px;background:#fffef9;text-decoration:none;color:#23483c}
+.library-lesson:hover{background:#f2f9f1;border-color:#a2c8ad}
+.library-lesson-index{background:#edf4ee;padding:7px 10px;border-radius:9px;font-size:12px;font-weight:800}
+.library-lesson-info{flex:1;min-width:0}.library-lesson-info strong{display:block;font-size:16px}.library-lesson-info small{display:block;font-size:13px;color:#617a6a;margin-top:2px}
+.library-lesson[data-locked="true"]{color:#647167;background:#f9f9f4}.library-lesson[data-locked="true"] .library-entry-arrow{display:none}
+.internal-nav{display:flex;flex-wrap:wrap;gap:12px}
+@media(max-width:990px){.library-entry-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.library-entry{flex-wrap:wrap}.library-entry-status{order:3;width:100%;margin-left:34px}}
+@media(max-width:750px){.library-main-grid{grid-template-columns:1fr}.library-entry-grid{grid-template-columns:1fr}.library-entry-status{order:0;width:auto;margin:0}.library-main-card h2{font-size:25px}.library-hero{padding:25px 0 32px}.library-toolbar label{width:100%}.library-count{width:100%}.library-entry{flex-wrap:nowrap}.internal-nav{gap:5px}.internal-nav a{font-size:12px}}
+@media(max-width:480px){.library-entry{flex-wrap:wrap}.library-entry-status{width:100%;margin-left:36px}.library-main-card{padding:17px;gap:12px}.library-icon{min-width:47px;height:47px;font-size:25px}.library-lesson{flex-wrap:wrap}.library-lesson-status{margin-left:40px}}
+[hidden]{display:none!important}
+
+/* De bestaande bronnenbibliotheek staat ook op blad 1. */
+.library-source-card{display:flex;gap:18px;align-items:flex-start;margin-top:22px;padding:22px;border-radius:17px;border:1px solid #dce6df;background:#fffaf0}
+.library-source-card h2{font-size:clamp(22px,3vw,28px);margin:0 0 7px;color:#184c4b}
+.library-source-card p{color:#52685c;margin:0 0 14px;max-width:800px}
+.library-source-card .button{display:inline-flex;max-width:100%;white-space:normal;text-align:left}
+@media(max-width:600px){.library-source-card{flex-direction:column}}
