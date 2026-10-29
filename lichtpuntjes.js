@@ -162,7 +162,7 @@
       image.src = 'assets/lichtpuntje-voorbeeld.png';
       image.alt = 'Voorbeeld van een Lichtpuntje';
       photoLink.href = image.src;
-      download.hidden = true;
+      if (download) download.hidden = true;
       return;
     }
     label.textContent = `Lichtpuntje ${latest.number} · ${latest.theme}`;
@@ -172,9 +172,7 @@
     image.src = latest.image;
     image.alt = `Lichtpuntje ${latest.number}: ${latest.title}`;
     photoLink.href = latest.image;
-    download.href = latest.image;
-    download.setAttribute('download', `Lichtpuntje_${latest.number}_Nederlands.png`);
-    download.hidden = false;
+    if (download) {download.href = latest.image; download.setAttribute('download', `Lichtpuntje_${latest.number}_Nederlands.png`);download.hidden = false;}
   }
   function appendCard(container, post) {
     const card = document.createElement('article'); card.className = 'lp-archive-card';
@@ -189,10 +187,7 @@
     dat.textContent=`Nr. ${post.number} · ${post.day} ${readableDate(post.date)}`;
     const title = document.createElement('h3');title.textContent=post.title;
     const desc = document.createElement('p');desc.textContent=post.description;
-    const download = document.createElement('a');download.className='button';
-    download.href=post.image;download.setAttribute('download',`Lichtpuntje_${post.number}_Nederlands.png`);
-    download.textContent='⬇ Download voor WhatsApp';
-    copy.append(dat,title,desc,download);card.append(link,copy);container.append(card);
+    copy.append(dat,title,desc);card.append(link,copy);container.append(card);
   }
   function updateArchive() {
     const container=document.getElementById('lp-archive-list');if(!container)return;
@@ -205,7 +200,7 @@
       message.textContent='Nog even geduld: op maandag 19 oktober verschijnt hier Lichtpuntje 98. Daarna komt er iedere dag een nieuw Lichtpuntje bij.';
       container.append(message);return;
     }
-    status.textContent=`${released.length} ${released.length===1?'Lichtpuntje is':'Lichtpuntjes zijn'} verschenen. Klik op een afbeelding om ze groot te bekijken of download ze voor WhatsApp.`;
+    status.textContent=`${released.length} ${released.length===1?'Lichtpuntje is':'Lichtpuntjes zijn'} verschenen. Klik op een afbeelding om ze groot te bekijken.`;
     released.forEach(post=>appendCard(container,post));
   }
   function render(){updateHome();updateArchive();}

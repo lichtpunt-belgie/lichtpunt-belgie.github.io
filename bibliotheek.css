@@ -51,3 +51,28 @@
 .library-source-card p{color:#52685c;margin:0 0 14px;max-width:800px}
 .library-source-card .button{display:inline-flex;max-width:100%;white-space:normal;text-align:left}
 @media(max-width:600px){.library-source-card{flex-direction:column}}
+
+
+/* Persoonlijke voortgang op boek- en soeraoverzichten (25 oktober 2026).
+   De bestaande studievinkjes en hun opslag worden niet aangepast. */
+.library-user-progress{margin-top:22px;padding:20px 23px;border:1px solid #cbded2;border-radius:17px;background:#eef6f0;color:#234b3e}
+.library-user-progress h2{margin:0 0 4px;font-size:clamp(20px,3vw,25px)}
+.library-user-progress .library-progress-count{font-size:15px;font-weight:700;line-height:1.5;margin:6px 0}
+.library-user-progress .library-progress-track{height:12px;max-width:720px;border-radius:40px;background:#dae6dc;overflow:hidden;margin:9px 0}
+.library-user-progress .library-progress-fill{height:100%;width:0;background:#328069;border-radius:40px;transition:width .25s ease}
+.library-user-progress .library-progress-note{font-size:13px;color:#53675d;line-height:1.5;margin:6px 0 0}
+.ls-status.is-completed{background:#d2ecdc;color:#16563d}
+.ls-status.is-todo{background:#f0f1ee;color:#45584f}
+.library-lesson.is-user-completed{border-color:#93c5a6;background:#f5fbf6}
+.library-lesson .library-personal-status{margin-left:6px}
+.library-lesson-status{display:flex;gap:5px;align-items:center;justify-content:flex-end;flex-wrap:wrap}
+@media(max-width:600px){
+  .library-lesson{display:grid;grid-template-columns:40px minmax(0,1fr) 22px;align-items:start;gap:8px 12px;padding:15px 14px}
+  .library-lesson-index{grid-column:1;grid-row:1;justify-self:start}
+  .library-lesson-info{grid-column:2;grid-row:1;min-width:0}
+  .library-lesson-info strong{overflow-wrap:anywhere;line-height:1.35}
+  .library-lesson-status{grid-column:2 / 4;grid-row:2;margin:0;justify-content:flex-start}
+  .library-lesson .library-entry-arrow{grid-column:3;grid-row:1;justify-self:end}
+  .library-lesson .library-personal-status{margin-left:0}
+  .library-user-progress{padding:16px}
+}

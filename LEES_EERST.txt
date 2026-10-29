@@ -1,20 +1,22 @@
-LICHTPUNT BELGIË – STUDIEBIBLIOTHEEK · VOORBEREID 25 OKTOBER 2026
+LICHTPUNT BELGIË - STUDIEUPDATE 29 OKTOBER 2026
 
-DIT PAKKET IS NOG NIET ONLINE GEPLAATST. ER IS GEEN GITHUB-AANPASSING UITGEVOERD.
+Dit pakket bevat alleen gewijzigde bestanden, geen volledige website of afbeeldingen.
 
-Bevat uitsluitend de nieuwe bibliotheekbladen en twee gewijzigde bestaande pagina’s:
-- index.html (alleen het blok «Lees vanaf het begin» vervangen; link bovenaan behouden)
-- bijbelstudies.html (Blad 1 van de studiebibliotheek)
-- bibliotheek-bijbel.html (Blad 2 – alle 66 Bijbelboeken)
-- bibliotheek-koran.html (Blad 2 – alle 114 soera’s)
-- bibliotheek-tora.html (Blad 2 – de vijf boeken van Mozes)
-- bibliotheek-andere.html (Blad 2 – ruimte voor uitbreiding)
-- bibliotheek-boek-genesis.html, bibliotheek-boek-1-petrus.html en bibliotheek-soera-49.html (voorbeeld van Blad 3)
-- bibliotheek.css en bibliotheek.js (alleen voor de nieuwe bibliotheek)
-- studieoverzicht-archief-24okt2026.html (reservekopie van het vorige overzicht)
+Inhoud:
+- De bestaande 14 Genesisstudies (hoofdstuk 1-2) met uitgebreidere uitleg per vers(groep).
+- Volledige boek/hoofdstuk/versvermeldingen en terugknoppen voor alle bestaande Genesis-, Petrus- en Koranstudies.
+- Verbeterde persoonlijke voortgang op Genesis-, 1 Petrus- en soera 49-overzichten.
+- Verwijderde WhatsApp-knop bij dagelijkse Lichtpuntjes; hun inhoud en afbeeldingen zijn behouden.
+- Een kleine CSS-aanvulling voor leesbaarheid en navigatie.
 
-De bestaande studiepagina’s, afbeeldingen, accounts en persoonlijke notities zitten NIET in dit pakket en hoeven niet vervangen te worden.
-De bestaande pagina «geschriften.html» blijft behouden; de nieuwe bibliotheek linkt ernaar.
+Let op: dit pakket schrijft NIET ineens Genesis hoofdstuk 3-50 uit en verandert GEEN publicatiedatums.
+Accountbestanden en persoonlijke notities worden NIET vervangen.
 
-Deze voorbereiding is nog NIET in de browser nagekeken of live getest.
-Publiceer pas na controle op een geschikt moment.
+UPLOAD:
+1. Pak het ZIP-bestand uit op je computer.
+2. Selecteer alle bestanden en upload deze naar de HOOFDMAP van de GitHub-repository (niet in een nieuwe onderliggende map).
+3. Kijk na of alle bestandsnamen op het rootniveau staan.
+4. Leg de wijzigingen vast met Commit.
+5. Controleer Genesis 1 vers 1-2, een terugknop en de voortgang bij een reeds afgevinkte studie.
+
+Maak bij voorkeur eerst een GitHub-back-up.
