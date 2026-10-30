@@ -1,0 +1,32 @@
+{
+  "id": "/",
+  "name": "Lichtpunt België",
+  "short_name": "Lichtpunt",
+  "description": "Een beetje licht, elke dag opnieuw. Vrij onderzoek naar geloof en levensbeschouwing.",
+  "lang": "nl-BE",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#fffdf8",
+  "theme_color": "#184c4b",
+  "icons": [
+    {
+      "src": "lichtpunt-app-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "lichtpunt-app-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "lichtpunt-app-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
