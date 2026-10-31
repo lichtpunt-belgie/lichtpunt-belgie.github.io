@@ -91,3 +91,11 @@
 
 /* 29 oktober: vaste terugnavigatie op iedere studie, ook op mobiele toestellen. */
 .study-quick-return{margin:0 0 12px;font-size:.95rem}.study-quick-return a{color:#22685f;font-weight:700;text-decoration:underline;text-underline-offset:3px}.verse-block p{line-height:1.8}.verse-block p+p{margin-top:.85rem}.genesis-rivers-figure{background:#f4faf8;border:1px solid #cdded6;border-radius:12px;padding:12px 14px;margin:22px 0}.genesis-rivers-figure figcaption{font-size:0.94rem;margin-bottom:8px}.genesis-rivers-figure svg{display:block;max-width:600px;width:100%;height:auto;margin:0 auto}.genesis-rivers-figure .micro{font-size:.78rem;margin:5px 0}
+
+
+/* 31 oktober – open studie-uitleg, mobielvriendelijk */
+.why-home{margin:42px auto 24px;padding:0}.why-home-content{max-width:940px;margin:auto;border:1px solid #d6e4df;border-radius:25px;padding:clamp(24px,5vw,52px);background:linear-gradient(115deg,#f2f8f3 0%,#fffaf0 100%);box-shadow:0 12px 36px rgba(26,80,70,.06)}
+.why-home h2,.why-library h2,.why-article h2{color:#184c4b;line-height:1.25}.why-home h2{font-size:clamp(26px,3.4vw,38px);margin:9px 0 18px}.why-home p{font-size:clamp(15px,1.7vw,18px);line-height:1.75;max-width:800px;margin:0 0 12px}.why-home .button{margin-top:13px}
+.why-library{margin:26px auto;padding:25px 29px;display:flex;gap:24px;align-items:center;justify-content:space-between;border:1px solid #d4e3dc;border-radius:19px;background:#f5faf6}.why-library h2{font-size:clamp(21px,2.5vw,28px);margin:0 0 10px}.why-library p{max-width:750px;line-height:1.7;margin:0}.why-library .button{flex:0 0 auto}
+.why-article{max-width:910px;margin:36px auto 60px;padding:clamp(24px,5vw,54px);background:#fffefb;border:1px solid #e6e9e1;border-radius:24px;box-shadow:0 10px 36px rgba(10,50,37,.06)}.why-article h2{font-size:clamp(24px,3vw,30px);margin:29px 0 14px}.why-article h2:first-child{margin-top:0}.why-article p{font-size:clamp(16px,1.65vw,18px);line-height:1.84;margin:0 0 16px}.why-article .why-conclusion{margin:25px 0;padding:20px 23px;border-left:4px solid #c3a36b;background:#f6f9f4;border-radius:0 12px 12px 0}.why-article .button{margin:6px 10px 6px 0}
+@media(max-width:700px){.why-home{margin:20px auto}.why-library{display:block;padding:22px}.why-library .button{margin-top:16px}.why-article{margin:22px auto;padding:24px 20px}}

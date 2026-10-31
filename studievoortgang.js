@@ -127,6 +127,41 @@
    const container=document.getElementById('daily-studies');
    if(!container)return;
    const today=belgianDate();
+  // Vanaf 2 november gaat het vervolg van 1 Petrus verder. Genesis wacht op de volgende reeks.
+  if(today>='2026-11-02'){
+    const start=Date.parse('2026-11-02T12:00:00Z');
+    const elapsed=Math.max(0,Math.floor((Date.parse(today+'T12:00:00Z')-start)/86400000));
+    const index=Math.min(13,elapsed);
+    const titles=[
+      ['Een brief aan mensen die zich vreemden voelen','1 Petrus 1:1–2'],
+      ['Een levende hoop, ondanks onzekerheid','1 Petrus 1:3–5'],
+      ['Vreugde en verdriet kunnen naast elkaar bestaan','1 Petrus 1:6–9'],
+      ['Profeten, vragen en een groter verhaal','1 Petrus 1:10–12'],
+      ['Heilig leven begint bij bewust nadenken','1 Petrus 1:13–16'],
+      ['Waarde, vrijheid en een nieuwe levensweg','1 Petrus 1:17–21'],
+      ['Oprechte liefde en woorden die blijven','1 Petrus 1:22–25'],
+      ['Wanneer het moeilijk wordt','1 Petrus 4:12–14'],
+      ['Niet alle tegenslag is hetzelfde','1 Petrus 4:15–16'],
+      ['Vertrouwen zonder het goede op te geven','1 Petrus 4:17–19'],
+      ['Leiding geven is dienen, niet overheersen','1 Petrus 5:1–4'],
+      ['Nederigheid en zorgen delen','1 Petrus 5:5–7'],
+      ['Waakzaam zijn zonder in angst te leven','1 Petrus 5:8–11'],
+      ['Een laatste groet en een boodschap van vrede','1 Petrus 5:12–14']
+    ];
+    const tag=document.getElementById('today-study-tag');
+    if(tag)tag.textContent=elapsed>13?'Studies · laatst verschenen':`Nieuwe studie · ${today.split('-').reverse().join('/')}`;
+    container.replaceChildren();
+    const row=document.createElement('div');row.className='daily-study-row';
+    const small=document.createElement('span');small.className='daily-study-series';small.textContent=`1 Petrus · aanvulling, deel ${index+1} van 14`;
+    const link=document.createElement('a');link.className='daily-study-link';link.href=`petrus-volledig-${String(index+1).padStart(2,'0')}.html`;link.textContent=titles[index][0]+' →';
+    const detail=document.createElement('span');detail.className='daily-study-passage';detail.textContent=titles[index][1];
+    row.append(small,link,detail);container.append(row);
+    const gen=document.createElement('div');gen.className='daily-study-row';
+    const genLabel=document.createElement('span');genLabel.className='daily-study-series';genLabel.textContent='Genesis · vervolg in voorbereiding';
+    const genLink=document.createElement('a');genLink.className='daily-study-link';genLink.href='bibliotheek-boek-genesis.html';genLink.textContent='Bekijk alle beschikbare Genesisstudies →';
+    gen.append(genLabel,genLink);container.append(gen);
+    return;
+  }
   if(today>='2026-10-26'){
      const date0=Date.parse('2026-10-26T12:00:00Z');
      const index2=Math.min(6,Math.max(0,Math.floor((Date.parse(today+'T12:00:00Z')-date0)/86400000)));
