@@ -11,6 +11,29 @@
 <link href="nieuws.css" rel="stylesheet"/><link href="manifest.webmanifest" rel="manifest"/>
 <link href="lichtpunt-app-192.png" rel="icon" sizes="192x192" type="image/png"/>
 <link href="lichtpunt-app-192.png" rel="apple-touch-icon"/>
+<style>
+/* Welkomsgedeelte onder de introductie: iets compacter op desktop en mobiel. */
+.hero-grid{min-height:0;padding:39px 0 47px;gap:46px}
+.hero h1{font-size:clamp(39px,4.1vw,61px);margin:12px 0 15px}
+.hero-copy>p{font-size:17px;line-height:1.65}
+.hero-actions{margin:20px 0 16px}
+.hero-visual{min-height:310px}
+.hero-visual:before{width:345px;height:345px}
+.hero-paper{min-height:275px;padding:27px 32px 25px}
+.hero-paper p{font-size:clamp(22px,2vw,28px);margin:18px 0 11px}
+.sunburst{top:-21px;font-size:65px}
+@media(max-width:800px){
+ .hero-grid{padding:32px 0 34px;gap:16px}
+ .hero-visual{min-height:255px}
+ .hero-paper{min-height:235px}
+ .sunburst{top:-10px;font-size:50px}
+}
+@media(max-width:520px){
+ .hero h1{font-size:39px}
+ .hero-copy>p{font-size:16px}
+ .hero-paper{padding:22px 23px}
+}
+</style>
 </head>
 <body>
 <a class="skip" href="#inhoud">Spring naar inhoud</a>
@@ -29,6 +52,13 @@
 </div>
 </header>
 <main id="inhoud">
+<section aria-labelledby="waarom-home-title" class="why-home shell"><div class="why-home-content"><span class="kicker">Voor gelovigen, zoekenden en niet-gelovigen</span><h2 id="waarom-home-title">Ontdek, onderzoek en begrijp</h2>
+<p>Bij Lichtpunt België bestuderen we de Bijbel, de Tora, de Koran en andere levensbeschouwelijke teksten, met respect voor ieders overtuiging.</p>
+<p>Of je nu gelooft, twijfelt, zoekende bent of helemaal niet gelooft: <strong>iedereen is welkom</strong>.</p>
+<p>Je krijgt hier de vrijheid om zelf te ontdekken, vragen te stellen en andere overtuigingen beter te begrijpen, <strong>zonder je eigen geloof of levensbeschouwing te moeten opgeven of veranderen</strong>.</p>
+<p>Want elkaar begrijpen betekent niet dat we hetzelfde moeten geloven.</p>
+<p><strong>Samen zoeken we naar kennis, begrip en respect, met behoud van ieders eigen overtuiging.</strong></p>
+<a class="button" href="waarom-deze-studies.html">Waarom deze studies? →</a></div></section>
 <section class="hero">
 <div class="shell hero-grid">
 <div class="hero-copy">
@@ -49,13 +79,7 @@
 <span aria-hidden="true" class="deco deco-one">✿</span><span aria-hidden="true" class="deco deco-two">✿</span>
 </div>
 </div>
-</section><section aria-labelledby="waarom-home-title" class="why-home shell"><div class="why-home-content"><span class="kicker">Voor gelovigen, zoekenden en niet-gelovigen</span><h2 id="waarom-home-title">Ontdek, onderzoek en begrijp</h2>
-<p>Bij Lichtpunt België bestuderen we de Bijbel, de Tora, de Koran en andere levensbeschouwelijke teksten, met respect voor ieders overtuiging.</p>
-<p>Of je nu gelooft, twijfelt, zoekende bent of helemaal niet gelooft: <strong>iedereen is welkom</strong>.</p>
-<p>Je krijgt hier de vrijheid om zelf te ontdekken, vragen te stellen en andere overtuigingen beter te begrijpen, <strong>zonder je eigen geloof of levensbeschouwing te moeten opgeven of veranderen</strong>.</p>
-<p>Want elkaar begrijpen betekent niet dat we hetzelfde moeten geloven.</p>
-<p><strong>Samen zoeken we naar kennis, begrip en respect, met behoud van ieders eigen overtuiging.</strong></p>
-<a class="button" href="waarom-deze-studies.html">Waarom deze studies? →</a></div></section>
+</section>
 <section class="section shell" id="lichtpuntjes">
 <div class="section-intro"><div><span class="kicker">Iets moois voor vandaag</span><h2>Het dagelijkse Lichtpuntje <span aria-hidden="true">♡</span></h2><p>Kleine woorden van hoop, aandacht en verbondenheid. Om te lezen, te bewaren of door te sturen.</p></div><span class="soft-label">Elke dag iets nieuws</span></div>
 <div class="features">
