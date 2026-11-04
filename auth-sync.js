@@ -1,3 +1,4 @@
+import './lichtpunt-analytics.js?v=20261104';
 /* Lichtpunt – websiteversie (22 oktober 2026)
    Alleen geregistreerde leden synchroniseren. Gastgegevens blijven lokaal.
    Wijzigingen staan eerst in een duurzame lokale wachtrij en worden pas als
