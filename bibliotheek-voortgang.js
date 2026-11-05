@@ -3,7 +3,7 @@
    Wijzigt zelf NOOIT studievinkjes, antwoorden of accountgegevens. */
 import {configured, auth, db} from './firebase-service.js';
 import {onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
-import {doc, getDocFromServer} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
+import {doc, onSnapshot} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
 
 const lessons=[...document.querySelectorAll('.library-lesson[href],.library-lesson[data-release]')];
 const listing=document.querySelector('.library-lessons');
@@ -54,30 +54,45 @@ if(listing && lessons.length){
  }
  function guest(){show(readLocal('lichtpunt.study.v1'),'Voortgang wordt alleen op dit toestel bewaard. Met een account kun je ze op andere toestellen terugvinden.');}
  let latestRequest=0;
- async function loadForUser(user){
+ let unsubscribe=null;
+ function listenForUser(user){
    const request=++latestRequest;
+   if(unsubscribe){unsubscribe();unsubscribe=null;}
    if(!user){guest();return;}
-   // De lokaal opgeslagen laatste stand verschijnt direct na terugnavigeren.
-   const cached=readLocal('lichtpunt.study.user.'+user.uid+'.v1');
-   const pending=readLocal('lichtpunt.study.pending.'+user.uid+'.v1');
-   show({...cached,...pending},'Je accountvoortgang wordt gecontroleerd…');
-   try{
-     const snapshot=await getDocFromServer(doc(db,'users',user.uid,'private','study'));
-     if(request!==latestRequest)return;
-     const cloud=snapshot.exists() && snapshot.data()?.done && typeof snapshot.data().done==='object'?snapshot.data().done:{};
-     // De wachtrij krijgt voorrang, ook wanneer de server nog oudere gegevens heeft.
-     show({...cloud,...readLocal('lichtpunt.study.pending.'+user.uid+'.v1')},'Persoonlijke voortgang uit je account. Een vinkje kun je in de studie zelf aan- of uitzetten.');
-   }catch(_){
-     if(request!==latestRequest)return;
-     show({...readLocal('lichtpunt.study.user.'+user.uid+'.v1'),...readLocal('lichtpunt.study.pending.'+user.uid+'.v1')},'Online voortgang niet bereikbaar. Dit is de laatst lokaal bewaarde stand; controleer opnieuw wanneer je verbinding werkt.');
-   }
+   const uid=user.uid;
+   const pendingKey='lichtpunt.study.pending.'+uid+'.v1';
+   // Toon vóór de bevestigde serverstand geen mogelijke verouderde lokale vinkjes.
+   count.textContent='Je online studievoortgang wordt geladen…';
+   note.textContent='Even wachten tot je accountgegevens zijn opgehaald.';
+   fill.style.width='0%';
+   bar.setAttribute('aria-valuenow','0');
+   lessons.forEach(el => {el.classList.remove('is-user-completed');el.querySelector('.library-personal-status')?.remove();});
+   unsubscribe=onSnapshot(doc(db,'users',uid,'private','study'),
+     {includeMetadataChanges:true},
+     snapshot=>{
+       if(request!==latestRequest)return;
+       // Niet van een verouderde cache terugvallen op een oude telling.
+       if(snapshot.metadata.fromCache || snapshot.metadata.hasPendingWrites)return;
+       const done=snapshot.exists() && snapshot.data()?.done && typeof snapshot.data().done==='object'
+         ? snapshot.data().done : {};
+       show({...done,...readLocal(pendingKey)},
+         'Voortgang uit je centrale account · Nieuwe wijzigingen verschijnen op andere toestellen.');
+     },
+     ()=>{
+       if(request!==latestRequest)return;
+       show({...readLocal('lichtpunt.study.user.'+uid+'.v1'),...readLocal(pendingKey)},
+         'Online verbinding tijdelijk niet beschikbaar. Dit is de lokale kopie.');
+     });
  }
  if(!configured){guest();}
- else onAuthStateChanged(auth,user=>{void loadForUser(user);});
- // Bij teruggaan via de browser kan een pagina uit de cache komen.
+ else onAuthStateChanged(auth,listenForUser);
  window.addEventListener('pageshow',event=>{
-   if(!event.persisted)return;
-   if(configured)void loadForUser(auth?.currentUser||null);
-   else guest();
+   if(event.persisted && configured)listenForUser(auth?.currentUser||null);
+ });
+ window.addEventListener('storage',event=>{
+   const user=auth?.currentUser;
+   if(!user || event.key!=='lichtpunt.study.pending.'+user.uid+'.v1')return;
+   // Een andere tab heeft een wijziging klaargezet; na servermelding volgt de bevestiging.
+   listenForUser(user);
  });
 }

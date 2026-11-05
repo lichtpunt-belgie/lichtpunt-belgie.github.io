@@ -8,14 +8,14 @@ import './lichtpunt-analytics.js?v=20261104';
 */
 import {configured, auth, db} from './firebase-service.js';
 import {onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js';
-import {doc, getDocFromServer, setDoc} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
+import {doc, getDocFromServer, setDoc, onSnapshot} from 'https://www.gstatic.com/firebasejs/13.0.0/firebase-firestore.js';
 
 const progress = window.LichtpuntVoortgang;
 const clean = o => ({
   done: o?.done && typeof o.done === 'object' && !Array.isArray(o.done) ? o.done : {},
   answers: o?.answers && typeof o.answers === 'object' && !Array.isArray(o.answers) ? o.answers : {}
 });
-const validId = id => /^(studie(?:-dag-[1-7])?|petrus-week[12]-dag[1-7]|genesis-week[12]-dag[1-7]|koran-soera49-13)$/.test(id);
+const validId = id => typeof id === 'string' && /^(?:studie(?:-dag-[1-7])?|petrus-(?:week[1-9][0-9]*-dag[1-9][0-9]*|volledig-[0-9]{2})|genesis-week[1-9][0-9]*-dag[1-9][0-9]*|johannes-[0-9]{2}|koran-[a-z0-9-]+)$/.test(id);
 const queueKey = userId => `lichtpunt.study.pending.${userId}.v1`;
 let userId = null;
 let ready = false;
@@ -23,6 +23,9 @@ let timer = null;
 let writing = false;
 let remote = clean(null);
 let session = 0;
+let stopLive = null;
+let initialFallback = null;
+let retryDelay = 3000;
 // Een extra persoonlijke herstelkopie op dit toestel. Nooit als bewijsmelding
 // voor serveropslag gebruiken; helpt als een scherm plots leeg raakt.
 const backupKey = (uid, id) => `lichtpunt.answer.backup.${uid}.${id}.v1`;
@@ -64,7 +67,7 @@ function nav(user) {
 }
 function schedule() {
   if (timer) clearTimeout(timer);
-  timer = setTimeout(() => { timer = null; void uploadChanges(); }, 1500);
+  timer = setTimeout(() => { timer = null; void uploadChanges(); }, 700);
 }
 function matches(server, patch) {
   return ['done', 'answers'].every(field => Object.entries(patch[field]).every(
@@ -90,6 +93,7 @@ async function uploadChanges() {
   writing = true;
   status('Wijzigingen worden veilig online bewaard…');
   let success = false;
+  let retry = false;
   try {
     const ref = doc(db, 'users', activeId, 'private', 'study');
     // merge:true wijzigt uitsluitend de meegestuurde velden.
@@ -98,7 +102,8 @@ async function uploadChanges() {
     const snapshot = await getDocFromServer(ref);
     if (activeSession !== session || activeId !== userId) return;
     if (!snapshot.exists() || !matches(clean(snapshot.data()), patch)) {
-      status('⚠️ Opslag nog niet bevestigd. Je wijziging staat voorlopig op dit toestel.');
+      status('⚠️ Opslag nog niet bevestigd. De wijziging blijft op dit toestel bewaard.');
+      retry = true;
       return;
     }
     remote = clean(snapshot.data());
@@ -108,15 +113,26 @@ async function uploadChanges() {
     // in het zichtbare tekstvak overschrijven zodra men het vinkje zette.
     // Het lokale formulier blijft tijdens bewerken de bron van waarheid.
     success = true;
+    retryDelay = 3000;
     status(isEmpty(remaining)
       ? '✓ Online opgeslagen en gecontroleerd · Alleen toegankelijk via jouw account.'
       : '✓ Eerdere wijziging online opgeslagen · Nieuwe wijziging wordt nog bewaard…');
   } catch (_) {
-    if (activeSession === session && activeId === userId)
+    if (activeSession === session && activeId === userId) {
       status('⚠️ Nog niet online opgeslagen. Je wijzigingen blijven voorlopig op dit toestel bewaard.');
+      retry = true;
+    }
   } finally {
     writing = false;
-    if (success && activeSession === session && activeId === userId && !isEmpty(readPending(activeId))) schedule();
+    if (activeSession === session && activeId === userId && !isEmpty(readPending(activeId))) {
+      if (success) schedule();
+      else if (retry) {
+        const delay = retryDelay;
+        retryDelay = Math.min(60000, retryDelay * 2);
+        if (timer) clearTimeout(timer);
+        timer = setTimeout(() => { timer = null; void uploadChanges(); }, delay);
+      }
+    }
   }
 }
 
@@ -280,55 +296,78 @@ if (document.readyState === 'loading') document.addEventListener('DOMContentLoad
 else addAnswerControls();
 
 if (configured) {
-  // Tijdens het laden van een account voorkomen we wijzigingen die zouden
-  // worden overschreven zodra de server voor het eerst antwoordt.
+  // De Firestore-database is de bron voor aangemelde gebruikers.
+  // Alleen expliciet gewijzigde lessen worden geschreven. Oude lokale kopieën
+  // worden NOOIT automatisch teruggestuurd of over online gegevens gelegd.
   setEditable(false);
   status('Studiegegevens worden geladen…');
-  onAuthStateChanged(auth, async user => {
+  onAuthStateChanged(auth, user => {
     const currentSession = ++session;
     if (timer) clearTimeout(timer);
     timer = null;
+    if (initialFallback) clearTimeout(initialFallback);
+    initialFallback = null;
+    if (stopLive) { stopLive(); stopLive = null; }
     ready = false;
+    retryDelay = 3000;
     userId = user?.uid || null;
+    remote = clean(null);
     nav(user);
     setEditable(!user);
     if (!user) {
       progress?.disconnect();
+      status('Zonder account blijven wijzigingen alleen op dit toestel.');
       return;
     }
     if (!progress) return;
     const activeId = user.uid;
     const ref = doc(db, 'users', activeId, 'private', 'study');
-    status('Je persoonlijke studiegegevens worden geladen…');
-    try {
-      let snapshot = await getDocFromServer(ref);
-      if (session !== currentSession) return;
-      if (!snapshot.exists()) {
-        // Een nieuw account mag bestaande *anonieme* studievinkjes overnemen.
-        const guest = clean(progress.guestState());
-        await setDoc(ref, guest);
-        snapshot = await getDocFromServer(ref);
-      }
-      if (session !== currentSession) return;
-      remote = clean(snapshot.data());
+    status('Je online studievoortgang wordt geladen…');
+
+    // Bij een tijdelijke netwerkstoring mag iemand verder studeren, maar
+    // wijzigingen gaan in de duurzame lokale wachtrij en NIET verloren.
+    // De offline kopie wordt niet automatisch naar Firestore gekopieerd.
+    initialFallback = setTimeout(() => {
+      if (session !== currentSession || ready) return;
+      const cached = progress.accountState?.(activeId) || clean(null);
+      progress.applyCloud(activeId, blend(cached, readPending(activeId)), {preserveDraft: true});
+      setEditable(true);
+      status('⚠️ Nog geen serververbinding. Wijzigingen worden op dit toestel bewaard tot synchronisatie mogelijk is.');
+    }, 5000);
+
+    stopLive = onSnapshot(ref, {includeMetadataChanges: true}, snapshot => {
+      if (session !== currentSession || userId !== activeId) return;
+      // Een offline of nog niet bevestigde Firestore-momentopname is geen
+      // betrouwbare basis om een lokale studie te overschrijven.
+      if (snapshot.metadata.fromCache || snapshot.metadata.hasPendingWrites) return;
+      if (initialFallback) { clearTimeout(initialFallback); initialFallback = null; }
+      remote = clean(snapshot.exists() ? snapshot.data() : null);
       const pending = readPending(activeId);
-      progress.applyCloud(activeId, blend(remote, pending));
+      progress.applyCloud(activeId, blend(remote, pending), {preserveDraft: true});
       ready = true;
       setEditable(true);
       if (!isEmpty(pending)) {
-        status('Lokale wijzigingen wachten nog op bevestiging…');
+        status('Je online voortgang is geladen. Lokale wijzigingen worden nog doorgestuurd…');
         schedule();
       } else {
-        status('✓ Online gegevens geladen · Alleen toegankelijk via jouw account.');
+        status('✓ Studievoortgang bijgewerkt vanuit je centrale account.');
       }
-    } catch (_) {
-      if (session === currentSession) {
-        // Wijzigingen niet doen alsof ze gesynchroniseerd zijn.
-        const pending = readPending(activeId);
-        progress.applyCloud(activeId, blend(remote, pending));
-        setEditable(true);
-        status('⚠️ Kon je online gegevens niet controleren. Werk tijdelijk op dit toestel; vernieuw later de pagina.');
-      }
-    }
+    }, () => {
+      if (session !== currentSession || userId !== activeId) return;
+      if (initialFallback) { clearTimeout(initialFallback); initialFallback = null; }
+      const cached = progress.accountState?.(activeId) || clean(null);
+      progress.applyCloud(activeId, blend(cached, readPending(activeId)), {preserveDraft: true});
+      setEditable(true);
+      ready = false;
+      status('⚠️ Online synchronisatie niet bereikbaar. Lokale wijzigingen blijven bewaard.');
+    });
+  });
+
+  window.addEventListener('storage', event => {
+    if (!userId || event.key !== queueKey(userId)) return;
+    // Een tweede tabblad kan een nieuwe wijziging hebben bewaard.
+    // Neem alleen de online stand en expliciete wachtrijwijzigingen over.
+    progress?.applyCloud(userId, blend(remote, readPending(userId)), {preserveDraft: true});
+    if (ready && !isEmpty(readPending(userId))) schedule();
   });
 }

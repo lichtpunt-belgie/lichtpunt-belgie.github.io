@@ -213,31 +213,39 @@
      row.append(small,link,detail);container.append(row);
    });
  }
- function applyCloud(uid,data){
+ function applyCloud(uid,data,options={}){
    userId=uid;
-   const clean={done:data&&data.done&&typeof data.done==='object'?data.done:{},answers:data&&data.answers&&typeof data.answers==='object'?data.answers:{}};
+   const clean={done:data&&data.done&&typeof data.done==='object'?{...data.done}:{},answers:data&&data.answers&&typeof data.answers==='object'?{...data.answers}:{}};
+   const text=document.querySelector('[data-personal-answer]');
+   const id=document.body?.dataset.studyId;
+   // Het online resultaat mag NOOIT de tekst overschrijven die iemand
+   // op dit moment aan het typen is. Inputwijzigingen maken zelf een wachtrij-item.
+   const preserve=Boolean(options.preserveDraft && text && document.activeElement===text);
+   if(preserve && id)clean.answers[id]=text.value;
    memoryState=clean;
-   try{localStorage.setItem(storageKey(),JSON.stringify(clean));}catch(e){storageWorks=false;}
+   try{localStorage.setItem(storageKey(),JSON.stringify(clean));storageWorks=true;}catch(e){storageWorks=false;}
    refreshOverview();
    const cb=document.querySelector('[data-study-complete]');
-   if(cb)cb.checked=isDone(document.body.dataset.studyId);
-   const text=document.querySelector('[data-personal-answer]');
-   if(text){const value=String(clean.answers[document.body.dataset.studyId]||'');if(text.value!==value)text.value=value;}
-   const notice=document.querySelector('[data-save-status]');
-   if(notice)notice.textContent='Online synchronisatie ingeschakeld · Je antwoorden zijn privé.';
+   if(cb)cb.checked=isDone(id);
+   if(text && !preserve){
+     const value=String(clean.answers[id]||'');
+     if(text.value!==value)text.value=value;
+   }
    const hint=document.querySelector('.progress-privacy-hint');
-   if(hint)hint.textContent='✓ Je studies en antwoorden worden via je account bewaard, en verschijnen na aanmelden ook op je andere toestellen.';
+   if(hint)hint.textContent='✓ Je studievoortgang wordt centraal bewaard en verschijnt op je andere aangemelde toestellen.';
  }
  function disconnect(){
    const old=userId;userId=null;memoryState={done:{},answers:{}};
-   if(old){try{localStorage.removeItem(`lichtpunt.study.user.${old}.v1`);}catch(e){}}
+   // De lokale accountkopie behouden als noodbuffer, maar niet tonen aan een gast.
    refreshOverview();
    const cb=document.querySelector('[data-study-complete]');if(cb)cb.checked=isDone(document.body.dataset.studyId);
    const text=document.querySelector('[data-personal-answer]');if(text)text.value=String(readState().answers[document.body.dataset.studyId]||'');
    const hint=document.querySelector('.progress-privacy-hint');if(hint)hint.textContent='✓ Zonder account blijven vinkjes en notities alleen in deze browser bewaard. Met registratie kun je ze op andere toestellen terugvinden.';
    const notice=document.querySelector('[data-save-status]');if(notice)notice.textContent='Alleen bewaard in deze browser · Niet verstuurd naar Lichtpunt.';
  }
- window.LichtpuntVoortgang={applyCloud,disconnect,guestState:()=>{
+ window.LichtpuntVoortgang={applyCloud,disconnect,accountState:uid=>{
+   try{const d=JSON.parse(localStorage.getItem(`lichtpunt.study.user.${uid}.v1`)||'{}');return {done:d.done||{},answers:d.answers||{}};}catch(e){return {done:{},answers:{}};}
+ },guestState:()=>{
    try{const a=JSON.parse(localStorage.getItem(KEY)||'{}');return {done:a.done||{},answers:a.answers||{}};}catch(e){return{done:{},answers:{}};}
  }};
  function init(){initOverview();initLesson();initToday();}
