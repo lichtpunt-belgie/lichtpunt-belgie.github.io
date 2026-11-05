@@ -1,0 +1,25 @@
+LICHTPUNT BELGIË – UPDATE 4
+Geloof door de eeuwen heen – Deel 2
+Datum: 5 november 2026
+
+INHOUD VAN DEZE UPDATE
+1. geloof-door-de-eeuwen.html  (tijdlijn: deel 2 is nu aanklikbaar)
+2. geschiedenis-eerste-steden.html  (nieuw hoofdstuk)
+
+PUBLICEREN OP GITHUB
+1. Pak dit ZIP-bestand uit op je computer.
+2. Open je bestaande repository: lichtpunt-belgie/lichtpunt-belgie.github.io
+3. Kies Add file -> Upload files.
+4. Sleep BEIDE HTML-bestanden naar het uploadvak, in de hoofdmap van de repository.
+5. Bevestig 'Commit changes'. Het tijdlijnoverzicht wordt hierdoor bijgewerkt.
+6. Controleer daarna:
+   https://lichtpunt-belgie.github.io/geloof-door-de-eeuwen.html
+   Klik op Deel 2; dat moet deze pagina openen:
+   https://lichtpunt-belgie.github.io/geschiedenis-eerste-steden.html
+
+LET OP
+- Alleen deze twee bestanden zijn nodig voor de update; er worden geen andere studies of scripts gewijzigd.
+- Het bestaande bestand 'geloof-door-de-eeuwen.html' wordt vervangen; dit is nodig om de nieuwe les aanklikbaar te maken.
+- De bestaande stijl en navigatie zijn gevolgd op basis van de publieke repository van 5 november 2026.
+- De publicatie gebeurt pas als je de bestanden zelf naar GitHub uploadt.
+- Deel 2 gebruikt het reeds aanwezige studievoortgang.js om een persoonlijk vinkje en een optioneel antwoord te bewaren/synchroniseren. Bestaande vinkjes en de andere lessen worden niet gewijzigd.
