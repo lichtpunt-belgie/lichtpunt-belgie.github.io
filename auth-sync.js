@@ -15,7 +15,7 @@ const clean = o => ({
   done: o?.done && typeof o.done === 'object' && !Array.isArray(o.done) ? o.done : {},
   answers: o?.answers && typeof o.answers === 'object' && !Array.isArray(o.answers) ? o.answers : {}
 });
-const validId = id => typeof id === 'string' && /^(?:studie(?:-dag-[1-7])?|petrus-(?:week[1-9][0-9]*-dag[1-9][0-9]*|volledig-[0-9]{2})|genesis-week[1-9][0-9]*-dag[1-9][0-9]*|johannes-[0-9]{2}|koran-[a-z0-9-]+)$/.test(id);
+const validId = id => typeof id === 'string' && /^(?:studie(?:-dag-[1-7])?|petrus-(?:week[1-9][0-9]*-dag[1-9][0-9]*|volledig-[0-9]{2})|genesis-week[1-9][0-9]*-dag[1-9][0-9]*|exodus-week[1-9][0-9]*-dag[1-9][0-9]*|johannes-[0-9]{2}|koran-[a-z0-9-]+)$/.test(id);
 const queueKey = userId => `lichtpunt.study.pending.${userId}.v1`;
 let userId = null;
 let ready = false;

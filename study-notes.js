@@ -11,7 +11,7 @@ import {doc, getDocFromServer, setDoc} from 'https://www.gstatic.com/firebasejs/
 
 const root = document.querySelector('[data-notes-app]');
 const studyId = document.body?.dataset.studyId || '';
-const VALID_ID = /^(studie(?:-dag-[1-7])?|petrus-week[12]-dag[1-7]|genesis-week[12]-dag[1-7]|koran-soera49-13)$/;
+const VALID_ID = /^(studie(?:-dag-[1-7])?|petrus-(?:week[1-9][0-9]*-dag[1-9][0-9]*|volledig-[0-9]{2})|genesis-week[1-9][0-9]*-dag[1-9][0-9]*|exodus-week[1-9][0-9]*-dag[1-9][0-9]*|johannes-[0-9]{2}|koran-[a-z0-9-]+)$/;
 const GUEST_KEY=`lichtpunt.notities.gast.${studyId}.v2`;
 const OLD_GUEST_KEY='lichtpunt.notities.gast.v1';
 const userCache = uid=>`lichtpunt.notities.gebruiker.${uid}.${studyId}.v1`;
