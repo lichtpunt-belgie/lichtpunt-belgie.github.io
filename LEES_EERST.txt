@@ -1,26 +1,31 @@
-LICHTPUNT BELGIË – OUDE TESTAMENT UPDATE (06-11-2026)
-=================================================
+LICHTPUNT BELGIË – DEELKNOP OP STARTPAGINA
+Update 6 november 2026
 
-Dit pakket bevat 16 HTML-bestanden:
-- 7 nieuwe lessen van GENESIS 5 (genesis-week5-dag1.html t/m dag7.html)
-- 7 nieuwe lessen van EXODUS 2 (exodus-week2-dag1.html t/m dag7.html)
-- 2 aangepaste boekoverzichten (bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html)
+INHOUD:
+- index.html: de startpagina met een nieuwe opvallende deelkaart.
 
-Publiceren op GitHub:
-1. Maak bij voorkeur eerst via GitHub een back-up van de twee bestaande boekoverzichten.
-2. Pak de ZIP op de pc uit.
-3. Open in GitHub de repository 'lichtpunt-belgie.github.io'.
-4. Upload alle 16 HTML-bestanden naar de HOOFDMAP (zelfde plek als de bestaande lessen).
-5. Sta vervanging toe van de twee boekoverzichten en bevestig met 'Commit changes'.
-6. Test de boekoverzichten en minstens één nieuwe les op pc en gsm. Test ook het afvinken en notities met je eigen account.
+WAT IS NIEUW?
+- Blok 'Deel Lichtpunt met vrienden' onder de introductie bovenaan.
+- Knop: op smartphone opent waar ondersteund het gewone deelmenu.
+- Op andere toestellen: link en uitnodiging kopiëren om zelf te plakken.
+- Aparte knop voor WhatsApp.
+- Geen account nodig om Lichtpunt door te sturen.
 
-Niets anders overschrijven: geen scripts, CSS, Firebase-bestanden of bestaande lespagina's.
+INSTALLEREN:
+1. Maak voor de zekerheid een kopie van je huidige 'index.html' uit GitHub.
+2. Pak de ZIP uit.
+3. Open GitHub > lichtpunt-belgie/lichtpunt-belgie.github.io > hoofdmap.
+4. Upload alleen index.html uit deze ZIP (vervang het bestaande bestand).
+5. Klik 'Commit changes'.
+6. Vernieuw https://lichtpunt-belgie.github.io/ (Ctrl+F5 op pc) en test op gsm.
 
-VRIJGAVE
-Genesis 5: 09-11 t/m 15-11-2026 (1 les per dag)
-Exodus 2: 06-11 t/m 12-11-2026 (1 les per dag)
-Het vrijgavesysteem gebruikt de Belgische kalenderdatum.
+BELANGRIJK:
+Deze versie is gebaseerd op de publiek zichtbare GitHub-hoofdpagina ten tijde
+van het maken van de update. Als je intussen zelf nog iets in index.html hebt
+gewijzigd, vergelijk dan eerst met die recentere versie, zodat niets verloren gaat.
+Er worden geen studie-, account-, of Firebase-bestanden vervangen.
 
-Let op: de nieuwe boekoverzichten zijn opnieuw opgebouwd op basis van de publieke GitHub-versie die op 06-11-2026 gecontroleerd werd. Bestaande titels, datums, volgorde, bestandsnamen en voortgangskoppelingen zijn daarbij behouden; controleer ze zelf vóór definitieve publicatie. Online synchronisatie van deze nieuwe lessen kon in deze omgeving niet live getest worden.
-
-De volledige hoofdstukken Genesis 5 en Exodus 2 zijn per vers behandeld via eigen Nederlandse werkvertalingen, uitleg en reflectie. De studie is onafhankelijk en geen opgelegde kerkelijke interpretatie.
+TEST:
+- Klik op 'Deel Lichtpunt met vrienden' op telefoon: deelvenster verschijnt.
+- Op pc: de uitnodiging wordt gekopieerd waar de browser dit toestaat.
+- Klik op WhatsApp delen: WhatsApp Web/app opent met de link.
