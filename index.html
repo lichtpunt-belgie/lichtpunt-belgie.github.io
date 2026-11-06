@@ -41,8 +41,12 @@
 .lp-share-strip .lp-share-button:hover,.lp-share-strip .lp-share-button:focus-visible{background:#134d43;color:#fff}
 .lp-share-strip .lp-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #b5d9c9;color:#18564c;border-radius:11px;padding:10px 14px;text-decoration:none;font-weight:650;background:#fff}
 .lp-share-strip .lp-whatsapp:hover,.lp-share-strip .lp-whatsapp:focus-visible{background:#e5f4e9}
+.lp-share-strip .lp-share-copy{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #b5d9c9;color:#18564c;border-radius:11px;padding:10px 14px;cursor:pointer;font:inherit;font-weight:650;background:#fff}
+.lp-share-strip .lp-share-copy:hover,.lp-share-strip .lp-share-copy:focus-visible{background:#e5f4e9}
+.lp-share-strip .lp-share-url-line{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin:12px 0 2px;font-size:.89rem;color:#42625d}
+.lp-share-strip .lp-share-url{font:inherit;color:#16564e;background:#fff;border:1px solid #d2e5dc;border-radius:8px;padding:8px 10px;width:min(100%,310px);max-width:100%;box-sizing:border-box;cursor:text}
 .lp-share-strip .lp-share-feedback{font-size:.88rem;color:#235f51;line-height:1.5;margin:8px 0 0;min-height:1.2em}
-@media(max-width:520px){.lp-share-strip{padding:15px}.lp-share-strip .lp-share-actions{flex-direction:column;align-items:stretch}.lp-share-strip .lp-share-button,.lp-share-strip .lp-whatsapp{width:100%;box-sizing:border-box;text-align:center}}
+@media(max-width:520px){.lp-share-strip{padding:15px}.lp-share-strip .lp-share-actions{flex-direction:column;align-items:stretch}.lp-share-strip .lp-share-button,.lp-share-strip .lp-whatsapp,.lp-share-strip .lp-share-copy{width:100%;box-sizing:border-box;text-align:center}.lp-share-strip .lp-share-url{width:100%}}
 </style>
 </head>
 <body>
@@ -75,7 +79,10 @@
 <div class="lp-share-actions">
 <button class="lp-share-button" id="lp-share-button" type="button">↗ Deel Lichtpunt met vrienden</button>
 <a class="lp-whatsapp" href="https://wa.me/?text=Ontdek%20Lichtpunt%20Belgi%C3%AB%3A%20een%20plek%20voor%20vrij%20onderzoek%20en%20bemoediging.%20https%3A%2F%2Flichtpunt-belgie.github.io%2F" target="_blank" rel="noopener noreferrer">WhatsApp delen ↗</a>
-</div><p class="lp-share-feedback" id="lp-share-feedback" role="status" aria-live="polite"></p>
+<button class="lp-share-copy" id="lp-copy-link" type="button">⧉ Kopieer websitelink</button>
+</div>
+<div class="lp-share-url-line"><label for="lp-share-url">Websitelink:</label><input id="lp-share-url" class="lp-share-url" type="text" value="https://lichtpunt-belgie.github.io/" readonly aria-label="Adres van Lichtpunt België; klik om te selecteren"></div>
+<p class="lp-share-feedback" id="lp-share-feedback" role="status" aria-live="polite"></p>
 </div>
 </div></section>
 <section class="hero">
@@ -182,6 +189,27 @@ Je hoeft nergens bij te horen om welkom te zijn.</p></article><article><span ari
     document.body.removeChild(field);
     return ok;
   }
+  var copyLinkButton = document.getElementById('lp-copy-link');
+  var urlField = document.getElementById('lp-share-url');
+  if (urlField) {
+    urlField.addEventListener('click', function(){urlField.select();});
+    urlField.addEventListener('focus', function(){urlField.select();});
+  }
+  if (copyLinkButton) copyLinkButton.addEventListener('click',async function(){
+    try {
+      if (navigator.clipboard && window.isSecureContext) {
+        await navigator.clipboard.writeText(shareUrl);
+        notify('Alleen de websitelink is gekopieerd. Plak hem in je e-mail, sms of een bericht.');
+        return;
+      }
+    } catch (e) {}
+    if (backupCopy(shareUrl)) {
+      notify('Alleen de websitelink is gekopieerd. Plak hem waar je wilt.');
+      return;
+    }
+    if (urlField) {urlField.focus(); urlField.select();}
+    notify('Selecteer en kopieer het adres hierboven om het door te sturen.');
+  });
   btn.addEventListener('click',async function(){
     var text = shareText + '\n' + shareUrl;
     if (navigator.share){

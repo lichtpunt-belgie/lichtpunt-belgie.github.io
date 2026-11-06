@@ -1,40 +1,19 @@
-LICHTPUNT BELGIË – NIEUWE TESTAMENT UPDATE 2 (06-11-2026)
-================================================================
+LICHTPUNT BELGIË — KOPIEERBARE WEBSITE-LINK
+6 november 2026
 
-14 nieuwe, uitgebreide lessen + 2 bijgewerkte boekoverzichten:
-- Johannes 3: johannes-19.html t/m johannes-25.html (Johannes 3:1–36)
-- Romeinen 2: romeinen-08.html t/m romeinen-14.html (Romeinen 2:1–29)
-- bibliotheek-boek-johannes.html
-- bibliotheek-boek-romeinen.html
+WAT IS NIEUW?
+- Extra knop 'Kopieer websitelink' bij 'Deel Lichtpunt met vrienden'.
+- Kopieert alleen https://lichtpunt-belgie.github.io/ (geen extra tekst).
+- Adres staat ook leesbaar in een tekstvak; klik of tik erop om het adres te selecteren.
+- Bestaande opties 'Deel Lichtpunt met vrienden' en 'WhatsApp delen' blijven behouden.
 
-LEES DIT EERST
-Het pakket is bedoeld voor de huidige GitHub-site lichtpunt-belgie.github.io.
-De nieuwe lessen gebruiken dezelfde voortgangs-ID's, gegevensvelden en scriptbestanden
-als de bestaande Johannes- en Romeinenstudies. De 25 bestaande lespagina's worden
-NIET vervangen. De twee boekoverzichten zijn opnieuw opgebouwd naar de publieke
-GitHub-versie van 6 november; bestaande links, lesnummers en voortgangs-ID's zijn
-behouden. Controleer de bijgewerkte overzichten ook zelf.
+PUBLICEREN
+1. Maak desgewenst een reservekopie van je huidige index.html uit GitHub.
+2. Pak dit ZIP-bestand uit.
+3. Upload alleen index.html in de hoofdmap van je GitHub Pages-repository.
+4. Vervang het bestaande index.html en klik op 'Commit changes'.
+5. Vernieuw de website op pc en gsm en test 'Kopieer websitelink'.
 
-UPLOAD
-1. Maak een back-up van de 2 bestaande boekoverzichten.
-2. Pak de ZIP op je pc uit.
-3. Open GitHub → lichtpunt-belgie.github.io → main.
-4. Upload alle 16 HTML-bestanden naar de HOOFDMAP van de repository.
-5. Vervang alleen de 2 bestaande boekoverzichten. Verander geen .js/.css/Firebase.
-6. Commit changes en bekijk de site op pc en gsm.
-
-VRIJGAVE
-Johannes 3 en Romeinen 2: telkens één les per reeks per dag, 6–12 november 2026.
-Op 6/11 zijn Johannes 19 en Romeinen 8 zichtbaar; daaropvolgende lessen verschijnen
-per dag. Omdat de bestanden openbaar op GitHub staan is dit geen geheime embargo.
-Voor toekomstige lessen toont het overzicht een vermelding dat ze binnenkort verschijnen.
-
-CONTROLE
-- Open de overzichten en controleer of oude en nieuwe leskaartjes zichtbaar zijn.
-- Test een leesbare nieuwe les, het teruggaan en de vorige/volgende knoppen.
-- Vink een les af en bewaar een testantwoord; kijk ook op je andere apparaat.
-- De online Firebase-synchronisatie kan alleen op je werkelijke website getest worden.
-
-INHOUD
-Eigen Nederlandse werkvertalingen uit de Griekse tekst en uitleg per vers.
-Onafhankelijke, open studie: geen opgelegde kerkelijke leer, geen oordelen over personen.
+LET OP
+Deze aanpassing verandert geen andere bestanden of studiepagina's.
+Gebaseerd op de laatst door ons gemaakte startpagina en op 6 november 2026 vergeleken met de GitHub-versie.
