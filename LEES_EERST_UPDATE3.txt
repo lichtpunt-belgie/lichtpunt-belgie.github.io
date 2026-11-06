@@ -1,0 +1,45 @@
+LICHTPUNT BELGIË – UPDATE 3: TORA & KORAN (6 NOVEMBER 2026)
+=====================================================================
+
+DIT ZIP-BESTAND BEVAT 5 HTML-BESTANDEN:
+
+NIEUWE LESSEN (toevoegen):
+  1. tora-deuteronomium-02.html     Deuteronomium 6:10–15 (Tora)
+  2. koran-soera49-14-15.html       Soera 49:14–15 (Koran)
+
+BIJGEWERKTE OVERZICHTEN (vervangen):
+  3. bibliotheek-tora-deuteronomium.html    1 -> 2 studies
+  4. bibliotheek-soera-49.html             1 -> 2 studies
+  5. bibliotheek-tora.html                 1 -> 2 studies in Deuteronomium
+
+WAAROM DEZE SELECTIE?
+- Behoud van oorspronkelijke Sjema-studie (tora-sjema-01.html)
+- Behoud van soera 49:13 (koran-soera49-13.html)
+- De bestaande hoofdindex van de Koran met 114 soera's verandert NIET.
+- De bestaande voortgangscodes blijven ongewijzigd. Nieuwe lessen krijgen
+  nieuwe, afzonderlijke codes. Account-/Firebase-/notitie-scripts veranderen NIET.
+
+UPLOAD NAAR GITHUB
+1. Maak eerst back-ups van de 3 bestaande overzichtsbestanden.
+2. Pak deze ZIP uit.
+3. Open GitHub -> lichtpunt-belgie.github.io -> hoofdtak main.
+4. Upload de 5 HTML-bestanden naar de HOOFDMAP (niet een submap).
+5. Vervang de 3 bestaande overzichten; laat alle andere bestanden staan.
+6. Klik op Commit changes.
+
+CONTROLE NA PUBLICATIE
+- Studiebibliotheek > Tora > Deuteronomium toont 2 studies.
+- Sjema opent nog steeds, en blijft afgevinkt als het al voltooid was.
+- Studiebibliotheek > Koran > Soera 49 toont 2 studies.
+- Soera 49:13 blijft beschikbaar; de nieuwe 49:14–15 opent.
+- Test afvinkvakjes en privévragen op pc én gsm met eigen account.
+- Bekijk de layout ook op smalle gsm-schermen.
+
+VRIJGAVE
+- De twee nieuwe studies zijn meteen vanaf 6 november 2026 beschikbaar.
+- Geen extra wijziging van vrijgave.js nodig.
+
+BELANGRIJK
+Deze update is gebouwd met behoud van de eerder bevestigde publieke
+GitHub-structuur. Een echte Firebase-test is pas mogelijk na publicatie
+op de website en aanmelding op beide toestellen.
