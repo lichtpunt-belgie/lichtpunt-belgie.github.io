@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="nl">
 <head>
 <meta charset="utf-8"/>
@@ -23,16 +22,27 @@
 .hero-paper p{font-size:clamp(22px,2vw,28px);margin:18px 0 11px}
 .sunburst{top:-21px;font-size:65px}
 @media(max-width:800px){
- .hero-grid{padding:32px 0 34px;gap:16px}
- .hero-visual{min-height:255px}
- .hero-paper{min-height:235px}
- .sunburst{top:-10px;font-size:50px}
+.hero-grid{padding:32px 0 34px;gap:16px}
+.hero-visual{min-height:255px}
+.hero-paper{min-height:235px}
+.sunburst{top:-10px;font-size:50px}
 }
 @media(max-width:520px){
- .hero h1{font-size:39px}
- .hero-copy>p{font-size:16px}
- .hero-paper{padding:22px 23px}
+.hero h1{font-size:39px}
+.hero-copy>p{font-size:16px}
+.hero-paper{padding:22px 23px}
 }
+/* Lichtpunt: deelknop, licht en compact zonder invloed op bestaande onderdelen. */
+.lp-share-strip{margin:19px 0 3px;padding:15px 18px;border:1px solid #d5e5dc;background:linear-gradient(110deg,#edf8f3,#fffdf5);border-radius:16px;box-shadow:0 5px 15px rgba(32,82,75,.04)}
+.lp-share-strip .lp-share-heading{font-size:1.07rem;font-weight:700;color:#194d46;margin:0 0 5px}
+.lp-share-strip .lp-share-intro{font-size:.95rem;line-height:1.6;color:#42625d;margin:0 0 12px}
+.lp-share-strip .lp-share-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.lp-share-strip .lp-share-button{display:inline-flex;align-items:center;justify-content:center;gap:7px;cursor:pointer;background:#1c6257;color:#fff;border:1px solid #1c6257;border-radius:11px;padding:12px 17px;font:inherit;font-weight:700;box-shadow:0 3px 8px rgba(26,74,66,.11)}
+.lp-share-strip .lp-share-button:hover,.lp-share-strip .lp-share-button:focus-visible{background:#134d43;color:#fff}
+.lp-share-strip .lp-whatsapp{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid #b5d9c9;color:#18564c;border-radius:11px;padding:10px 14px;text-decoration:none;font-weight:650;background:#fff}
+.lp-share-strip .lp-whatsapp:hover,.lp-share-strip .lp-whatsapp:focus-visible{background:#e5f4e9}
+.lp-share-strip .lp-share-feedback{font-size:.88rem;color:#235f51;line-height:1.5;margin:8px 0 0;min-height:1.2em}
+@media(max-width:520px){.lp-share-strip{padding:15px}.lp-share-strip .lp-share-actions{flex-direction:column;align-items:stretch}.lp-share-strip .lp-share-button,.lp-share-strip .lp-whatsapp{width:100%;box-sizing:border-box;text-align:center}}
 </style>
 </head>
 <body>
@@ -58,7 +68,16 @@
 <p>Je krijgt hier de vrijheid om zelf te ontdekken, vragen te stellen en andere overtuigingen beter te begrijpen, <strong>zonder je eigen geloof of levensbeschouwing te moeten opgeven of veranderen</strong>.</p>
 <p>Want elkaar begrijpen betekent niet dat we hetzelfde moeten geloven.</p>
 <p><strong>Samen zoeken we naar kennis, begrip en respect, met behoud van ieders eigen overtuiging.</strong></p>
-<a class="button" href="waarom-deze-studies.html">Waarom deze studies? →</a></div></section>
+<a class="button" href="waarom-deze-studies.html">Waarom deze studies? →</a>
+<div class="lp-share-strip" aria-labelledby="lp-share-title">
+<p class="lp-share-heading" id="lp-share-title">♡ Deel Lichtpunt met vrienden</p>
+<p class="lp-share-intro">Ken je iemand die graag zelfstandig leest of onderzoek doet? Nodig die persoon vrijblijvend uit op Lichtpunt België.</p>
+<div class="lp-share-actions">
+<button class="lp-share-button" id="lp-share-button" type="button">↗ Deel Lichtpunt met vrienden</button>
+<a class="lp-whatsapp" href="https://wa.me/?text=Ontdek%20Lichtpunt%20Belgi%C3%AB%3A%20een%20plek%20voor%20vrij%20onderzoek%20en%20bemoediging.%20https%3A%2F%2Flichtpunt-belgie.github.io%2F" target="_blank" rel="noopener noreferrer">WhatsApp delen ↗</a>
+</div><p class="lp-share-feedback" id="lp-share-feedback" role="status" aria-live="polite"></p>
+</div>
+</div></section>
 <section class="hero">
 <div class="shell hero-grid">
 <div class="hero-copy">
@@ -115,27 +134,67 @@
 <div class="library-source-card"><span aria-hidden="true" class="library-icon">📚</span><div><h2>Online geschriften en vertalingen</h2><p>Vergelijk Bijbeluitgaven (NBV21, HSV, Statenvertaling), de Tora, Tenach, Koran en historische bronteksten.</p><a class="button button-outline" href="geschriften.html">Bekijk alle vertalingen en bronnen →</a></div></div>
 <div class="study-overview-link"><a class="button button-outline" href="bijbelstudies.html">Ontdek de volledige studiebibliotheek →</a></div>
 </section>
-<section class="section shell writers-section" id="mensen"><div class="section-intro"><div><span class="kicker">De mensen achter de Bijbel</span><h2>Ontmoet de wereld van Petrus en Genesis</h2><p>Ontdek wie Petrus was, waar hij leefde en wat we wel en niet weten over de schrijvers van de Bijbel.</p></div></div><div class="source-teasers"><div><h3>👤 Het leven van Petrus</h3><p>Van visser aan het Meer van Galilea tot een sleutelfiguur in de eerste christelijke gemeenschap.</p><a class="text-link" href="petrus-leven.html">Lees zijn verhaal →</a></div><div><h3>📜 Wie schreef Genesis?</h3><p>Traditie, Hebreeuwse brontekst en wetenschappelijk onderzoek.</p><a class="text-link" href="genesis-auteurschap.html">Ontdek de achtergrond →</a></div><div><h3>📖 Twee reeksen per week</h3><p>Verder met 1 Petrus én een nieuwe reeks vanaf Genesis 1. Dagelijkse vrijgave vanaf maandag 19 oktober.</p><a class="text-link" href="bijbelstudies.html#nieuwe-studies">Bekijk de studies →</a></div></div></section><section class="section shell library-feature" id="geschriften">
+<section class="section shell writers-section" id="mensen"><div class="section-intro"><div><span class="kicker">De mensen achter de Bijbel</span><h2>Ontmoet de wereld van Petrus en Genesis</h2><p>Ontdek wie Petrus was, waar hij leefde en wat we wel en niet weten over de schrijvers van de Bijbel.</p></div></div><div class="source-teasers"><div><h3>👤 Het leven van Petrus</h3><p>Van visser aan het Meer van Galilea tot een sleutelfiguur in de eerste christelijke gemeenschap.</p><a class="text-link" href="petrus-leven.html">Lees zijn verhaal →</a></div><div><h3>📜 Wie schreef Genesis?</h3><p>Traditie, Hebreeuwse brontekst en wetenschappelijk onderzoek.</p><a class="text-link" href="genesis-auteurschap.html">Ontdek de achtergrond →</a></div><div><h3>📖 Twee reeksen per week</h3><p>Verder met 1 Petrus én een nieuwe reeks vanaf Genesis 1.
+Dagelijkse vrijgave vanaf maandag 19 oktober.</p><a class="text-link" href="bijbelstudies.html#nieuwe-studies">Bekijk de studies →</a></div></div></section><section class="section shell library-feature" id="geschriften">
 <div class="section-intro"><div><span class="kicker">Lees en vergelijk</span><h2>Online religieuze geschriften 📚</h2><p>Open je eigen Bijbelvertaling of ontdek andere religieuze geschriften. Alle links openen op de oorspronkelijke website, in een nieuw tabblad.</p></div></div>
 <div class="source-teasers"><div><span aria-hidden="true" class="source-teaser-icon">📖</span><h3>Bijbels in het Nederlands</h3><p>Onder andere HSV, NBV21, Statenvertaling en BasisBijbel.</p></div><div><span aria-hidden="true" class="source-teaser-icon">📜</span><h3>Thora, Tenach en Koran</h3><p>Rechtstreekse verwijzingen naar bestaande digitale bibliotheken.</p></div><div><span aria-hidden="true" class="source-teaser-icon">🔎</span><h3>De oude talen</h3><p>Bekijk het Hebreeuws, Aramees en Grieks met studietools.</p></div></div>
 <p class="library-feature-action"><a class="button" href="geschriften.html">Bekijk alle links <span aria-hidden="true">↗</span></a></p>
 </section><section class="section muted-section" id="vragen">
-<div class="shell ask-grid"><div><span class="kicker">Ruimte om vragen te stellen</span><h2>Onderzoek op jouw tempo.</h2><p>Heb je vragen over een geloofstekst, een levensbeschouwing of de historische achtergrond? Onderzoek gerust op je eigen tempo.</p><p>Voorlopig verloopt dit via <strong>je eigen ChatGPT-account</strong>. Je gesprek wordt niet op deze proefwebsite geplaatst of aan andere bezoekers getoond.</p><a class="button" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">Open ChatGPT voor privévragen <span aria-hidden="true">↗</span></a><p class="micro">Wil je ons iets vragen over Lichtpunt of een probleem melden? <a href="contact.html">Neem rechtstreeks contact op met Lichtpunt België</a>.</p><p class="micro">ChatGPT opent apart. Gratis gebruik is mogelijk met limieten; voor sommige functies is een account vereist.</p></div><div class="chat-illustration"><div class="chat-label">Zo kan een vraag eruitzien</div><div class="chat-bubble question">Waarom noemt Petrus Jezus de hoeksteen?</div><div class="chat-bubble answer"><span>✦ Uitleg</span><p>Een hoeksteen geeft een gebouw richting en samenhang. Petrus gebruikt dat beeld om te laten zien welke centrale plaats Jezus volgens hem heeft.</p></div><div class="private-note">♧ Jouw persoonlijke vragen blijven buiten de openbare website.</div></div></div>
+<div class="shell ask-grid"><div><span class="kicker">Ruimte om vragen te stellen</span><h2>Onderzoek op jouw tempo.</h2><p>Heb je vragen over een geloofstekst, een levensbeschouwing of de historische achtergrond? Onderzoek gerust op je eigen tempo.</p><p>Voorlopig verloopt dit via <strong>je eigen ChatGPT-account</strong>.
+Je gesprek wordt niet op deze proefwebsite geplaatst of aan andere bezoekers getoond.</p><a class="button" href="https://chatgpt.com/" rel="noopener noreferrer" target="_blank">Open ChatGPT voor privévragen <span aria-hidden="true">↗</span></a><p class="micro">Wil je ons iets vragen over Lichtpunt of een probleem melden? <a href="contact.html">Neem rechtstreeks contact op met Lichtpunt België</a>.</p><p class="micro">ChatGPT opent apart.
+Gratis gebruik is mogelijk met limieten; voor sommige functies is een account vereist.</p></div><div class="chat-illustration"><div class="chat-label">Zo kan een vraag eruitzien</div><div class="chat-bubble question">Waarom noemt Petrus Jezus de hoeksteen?</div><div class="chat-bubble answer"><span>✦ Uitleg</span><p>Een hoeksteen geeft een gebouw richting en samenhang.
+Petrus gebruikt dat beeld om te laten zien welke centrale plaats Jezus volgens hem heeft.</p></div><div class="private-note">♧ Jouw persoonlijke vragen blijven buiten de openbare website.</div></div></div>
 </section>
-<section class="section shell" id="leden"><div class="member-banner"><div><span class="kicker">Lichtpunt wordt stap voor stap opgebouwd</span><h2>Een eigen plekje op Lichtpunt</h2><p>Maak gratis een account en bewaar je studievoortgang en persoonlijke studienotities veilig online. Op gsm en computer kun je verdergaan. Zonder account blijft alles gratis te lezen. Na registratie kun je Lichtpunt ook als app installeren op Android of iPhone.</p><a class="button button-light" href="account.html#registreren">Gratis registreren</a><p class="micro">Zolang de kosten beperkt blijven, blijft registratie gratis. Bij sterke groei kan later een kleine bijdrage overwogen worden; nooit zonder voorafgaande aankondiging of jouw toestemming.</p></div><span aria-hidden="true" class="member-symbol">♡</span></div></section>
-<section class="section values-section"><div class="shell"><div class="centered-heading"><span class="kicker">Waar we voor staan</span><h2>Lezen. Leren. Zelf nadenken.</h2></div><div class="value-grid"><article><span aria-hidden="true">☀</span><h3>Voor iedereen</h3><p>Geen kerkelijk lidmaatschap vereist. Je hoeft nergens bij te horen om welkom te zijn.</p></article><article><span aria-hidden="true">⌁</span><h3>Met oog voor de bron</h3><p>Bij elke studie vermelden we de bron, historische context en waar mogelijk de oorspronkelijke taal.</p></article><article><span aria-hidden="true">♡</span><h3>Zonder druk</h3><p>Vragen en twijfels zijn welkom. We leggen geen kerkelijke richting op.</p></article></div></div></section>
+<section class="section shell" id="leden"><div class="member-banner"><div><span class="kicker">Lichtpunt wordt stap voor stap opgebouwd</span><h2>Een eigen plekje op Lichtpunt</h2><p>Maak gratis een account en bewaar je studievoortgang en persoonlijke studienotities veilig online. Op gsm en computer kun je verdergaan. Zonder account blijft alles gratis te lezen.
+Na registratie kun je Lichtpunt ook als app installeren op Android of iPhone.</p><a class="button button-light" href="account.html#registreren">Gratis registreren</a><p class="micro">Zolang de kosten beperkt blijven, blijft registratie gratis. Bij sterke groei kan later een kleine bijdrage overwogen worden; nooit zonder voorafgaande aankondiging of jouw toestemming.</p></div><span aria-hidden="true" class="member-symbol">♡</span></div></section>
+<section class="section values-section"><div class="shell"><div class="centered-heading"><span class="kicker">Waar we voor staan</span><h2>Lezen. Leren. Zelf nadenken.</h2></div><div class="value-grid"><article><span aria-hidden="true">☀</span><h3>Voor iedereen</h3><p>Geen kerkelijk lidmaatschap vereist.
+Je hoeft nergens bij te horen om welkom te zijn.</p></article><article><span aria-hidden="true">⌁</span><h3>Met oog voor de bron</h3><p>Bij elke studie vermelden we de bron, historische context en waar mogelijk de oorspronkelijke taal.</p></article><article><span aria-hidden="true">♡</span><h3>Zonder druk</h3><p>Vragen en twijfels zijn welkom. We leggen geen kerkelijke richting op.</p></article></div></div></section>
 </main>
-<footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><span aria-hidden="true" class="brandmark">✦</span><div><strong>Lichtpunt</strong><small>Een beetje licht, elke dag opnieuw.</small></div></div><div class="footer-meta"><p class="footer-contact"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></p><p>Gratis lezen · Registratie op vrijwillige basis</p><p class="footer-credit">Ontwikkeld door <strong>PM Business Support</strong> met ondersteuning van <strong>ChatGPT</strong></p></div></div></footer>
+<footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><span aria-hidden="true" class="brandmark">✦</span><div><strong>Lichtpunt</strong><small>Een beetje licht, elke dag opnieuw</small></div></div><div class="footer-meta"><p class="footer-contact"><a href="contact.html">Contact</a> · <a href="privacy.html">Privacy</a></p><p>Gratis lezen · Registratie op vrijwillige basis</p><p class="footer-credit">Ontwikkeld door <strong>PM Business Support</strong> met ondersteuning van <strong>ChatGPT</strong></p></div></div></footer>
 <script src="script.js"></script>
 <script src="lichtpuntjes.js"></script><script src="studievoortgang.js"></script><script src="auth-sync.js" type="module"></script><div class="nieuws-overlay" hidden="" id="wat-is-nieuw"><section aria-labelledby="nieuws-title" aria-modal="true" class="nieuws-modal" role="dialog" tabindex="-1">
 <button aria-label="Sluit venster" class="nieuws-close" data-close-news="" type="button">×</button>
-<p class="kicker">Een nieuwe stap voor Lichtpunt ☀️</p>
-<h2 id="nieuws-title">Wat is nieuw bij Lichtpunt?</h2>
+<p class="kicker">Een nieuwe stap voor Lichtpunt ☀️</p><h2 id="nieuws-title">Wat is nieuw bij Lichtpunt?</h2>
 <p>Met onze nieuwste versie wordt zelfstandig onderzoeken nog gemakkelijker:</p>
 <ul><li><strong>Geloof &amp; Levensbeschouwing:</strong> ons bredere studieaanbod krijgt een open naam.</li>
 <li><strong>Gratis aanmelden:</strong> bewaar je studievoortgang op meerdere toestellen.</li>
-<li><strong>Eigen studienotities:</strong> schrijf bij elke studiedag meerdere opmerkingen of opzoekingen.</li>
-<li><strong>Vrij blijven lezen:</strong> registratie is niet verplicht.</li></ul>
+<li><strong>Eigen studienotities:</strong> schrijf bij elke studiedag meerdere opmerkingen of opzoekingen.</li><li><strong>Vrij blijven lezen:</strong> registratie is niet verplicht.</li></ul>
 <p class="nieuws-fine">De eerste studies behandelen Petrus en Genesis. Andere religies en levensbeschouwingen worden stap voor stap toegevoegd.</p>
 <div class="nieuws-actions"><a class="button" href="bijbelstudies.html">Bekijk de studies</a><button class="button button-outline" data-close-news="" type="button">Verder naar Lichtpunt</button></div>
-</section></div><script defer="" src="nieuws.js"></script></body></html>
+</section></div><script defer="" src="nieuws.js"></script>
+<script>
+(function(){
+  'use strict';
+  var btn = document.getElementById('lp-share-button');
+  var feedback = document.getElementById('lp-share-feedback');
+  if (!btn) return;
+  var shareUrl = 'https://lichtpunt-belgie.github.io/';
+  var shareTitle = 'Lichtpunt België';
+  var shareText = 'Ontdek Lichtpunt België: een plek voor vrij onderzoek naar geloof en levensbeschouwing en een beetje dagelijkse bemoediging.';
+  function notify(msg){ if (feedback) feedback.textContent = msg; }
+  function backupCopy(str){
+    var field = document.createElement('textarea');
+    field.value=str; field.setAttribute('readonly','');
+    field.style.position='fixed'; field.style.left='-9999px';
+    document.body.appendChild(field);field.select();
+    var ok=false;
+    try{ok=document.execCommand('copy');}catch(e){}
+    document.body.removeChild(field);
+    return ok;
+  }
+  btn.addEventListener('click',async function(){
+    var text = shareText + '\n' + shareUrl;
+    if (navigator.share){
+      try{await navigator.share({title:shareTitle,text:shareText,url:shareUrl});notify('Bedankt om Lichtpunt te delen!');return;}
+      catch(e){if(e && e.name==='AbortError')return;}
+    }
+    try{
+      if(navigator.clipboard && window.isSecureContext){await navigator.clipboard.writeText(text);notify('De uitnodiging en link zijn gekopieerd. Plak ze in WhatsApp, e-mail of een bericht.');return;}
+    }catch(e){}
+    if (backupCopy(text)){notify('De uitnodiging en link zijn gekopieerd. Je kunt ze nu plakken in een bericht.');return;}
+    notify('Kopieer deze link om Lichtpunt door te sturen: '+shareUrl);
+    window.prompt('Kopieer deze link om te delen:',shareUrl);
+  });
+})();
+</script>
+</body></html>

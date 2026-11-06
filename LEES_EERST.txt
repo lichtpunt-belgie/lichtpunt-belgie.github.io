@@ -1,24 +1,31 @@
-LICHTPUNT BELGIË – Aanpassing studiepagina (6 november 2026)
+LICHTPUNT BELGIË – DEELKNOP OP STARTPAGINA
+Update 6 november 2026
 
-Wat verandert er?
-- De bestaande aankondiging bovenaan de pagina "Geloof & Levensbeschouwing"
-  is vervangen door een duidelijke promotiekaart met afbeelding, titel en knop.
-- De knop verwijst naar geloof-door-de-eeuwen.html.
-- De overige studie-inhoud, navigatie, accountkoppeling en bestaande pagina's blijven behouden.
-- Het beeld is een digitaal gegenereerde sfeerimpressie, geen foto van een echt identificeerbaar monument.
+INHOUD:
+- index.html: de startpagina met een nieuwe opvallende deelkaart.
 
-NAAR GITHUB
-1. Pak dit ZIP-bestand eerst uit op de computer.
-2. Open de GitHub repository lichtpunt-belgie/lichtpunt-belgie.github.io.
-3. Ga naar de hoofdmap van de repository en kies Add file > Upload files.
-4. Upload UITSLUITEND deze twee bestanden uit de uitgepakte map:
-   - bijbelstudies.html (bestaand bestand vervangen)
-   - geloof-door-de-eeuwen-sfeer.jpg (nieuw bestand)
-5. Bevestig de wijziging met Commit changes.
-6. Open https://lichtpunt-belgie.github.io/bijbelstudies.html
-   en vernieuw de pagina met Ctrl+F5 indien je nog het oude blok ziet.
+WAT IS NIEUW?
+- Blok 'Deel Lichtpunt met vrienden' onder de introductie bovenaan.
+- Knop: op smartphone opent waar ondersteund het gewone deelmenu.
+- Op andere toestellen: link en uitnodiging kopiëren om zelf te plakken.
+- Aparte knop voor WhatsApp.
+- Geen account nodig om Lichtpunt door te sturen.
 
-BELANGRIJK
-- Upload LEES_EERST.txt NIET; die is alleen voor jouw uitleg.
-- Je hoeft styles.css of andere websitebestanden NIET te veranderen.
-- Deze ZIP wijzigt niets automatisch online; pas na je GitHub-upload is het zichtbaar.
+INSTALLEREN:
+1. Maak voor de zekerheid een kopie van je huidige 'index.html' uit GitHub.
+2. Pak de ZIP uit.
+3. Open GitHub > lichtpunt-belgie/lichtpunt-belgie.github.io > hoofdmap.
+4. Upload alleen index.html uit deze ZIP (vervang het bestaande bestand).
+5. Klik 'Commit changes'.
+6. Vernieuw https://lichtpunt-belgie.github.io/ (Ctrl+F5 op pc) en test op gsm.
+
+BELANGRIJK:
+Deze versie is gebaseerd op de publiek zichtbare GitHub-hoofdpagina ten tijde
+van het maken van de update. Als je intussen zelf nog iets in index.html hebt
+gewijzigd, vergelijk dan eerst met die recentere versie, zodat niets verloren gaat.
+Er worden geen studie-, account-, of Firebase-bestanden vervangen.
+
+TEST:
+- Klik op 'Deel Lichtpunt met vrienden' op telefoon: deelvenster verschijnt.
+- Op pc: de uitnodiging wordt gekopieerd waar de browser dit toestaat.
+- Klik op WhatsApp delen: WhatsApp Web/app opent met de link.
