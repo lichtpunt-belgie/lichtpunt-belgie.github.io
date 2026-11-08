@@ -1,19 +1,23 @@
-LICHTPUNT BELGIË — KOPIEERBARE WEBSITE-LINK
-6 november 2026
+LICHTPUNT BELGIË — UPDATE OUDE TESTAMENT (8 NOVEMBER 2026)
 
-WAT IS NIEUW?
-- Extra knop 'Kopieer websitelink' bij 'Deel Lichtpunt met vrienden'.
-- Kopieert alleen https://lichtpunt-belgie.github.io/ (geen extra tekst).
-- Adres staat ook leesbaar in een tekstvak; klik of tik erop om het adres te selecteren.
-- Bestaande opties 'Deel Lichtpunt met vrienden' en 'WhatsApp delen' blijven behouden.
+Dit pakket bevat 16 HTML-bestanden voor de hoofdmap van de bestaande GitHub-website:
+- 7 nieuwe lessen Genesis 6 (genesis-week6-dag1.html t/m dag7.html)
+- 7 nieuwe lessen Exodus 3 (exodus-week3-dag1.html t/m dag7.html)
+- bibliotheek-boek-genesis.html (boekoverzicht, inclusief alle 42 lessen)
+- bibliotheek-boek-exodus.html (boekoverzicht, inclusief alle 21 lessen)
 
-PUBLICEREN
-1. Maak desgewenst een reservekopie van je huidige index.html uit GitHub.
-2. Pak dit ZIP-bestand uit.
-3. Upload alleen index.html in de hoofdmap van je GitHub Pages-repository.
-4. Vervang het bestaande index.html en klik op 'Commit changes'.
-5. Vernieuw de website op pc en gsm en test 'Kopieer websitelink'.
+PUBLICATIEDATUMS
+Exodus 3: 13–19 november 2026 (één les per dag)
+Genesis 6: 16–22 november 2026 (één les per dag)
 
-LET OP
-Deze aanpassing verandert geen andere bestanden of studiepagina's.
-Gebaseerd op de laatst door ons gemaakte startpagina en op 6 november 2026 vergeleken met de GitHub-versie.
+INSTALLEREN
+1. Maak eerst een reservekopie van de bestaande bestanden bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
+2. Pak de ZIP uit op je computer.
+3. Upload de 16 HTML-bestanden in de HOOFDMAP van je repository lichtpunt-belgie.github.io.
+4. Kies Commit changes. Laat de bestaande CSS-, JS- en andere HTML-bestanden ongemoeid.
+5. Test op computer en gsm een nieuwe les, het overzicht, afvinken, persoonlijke antwoorden en accountnotities.
+
+De twee overzichten zijn gebaseerd op de laatst beschikbare updatebestanden van 6 november 2026. Controleer eventuele tussentijdse wijzigingen voor het overschrijven: een nieuwere versie van de overzichtspagina zou anders verloren kunnen gaan.
+
+Bron: eigen Nederlandse werkvertalingen uit de Masoretische tekst, met koppeling naar de Hebreeuwse brontekst. Geen letterlijke overname van moderne Bijbelvertalingen.
+Deze ZIP bevat geen bestaande lesbestanden en geen account- of databasebestanden.
