@@ -1,31 +1,32 @@
-LICHTPUNT BELGIË – PERSOONLIJKE BEGROETING OP STARTPAGINA
+LICHTPUNT BELGIË – UPDATE 3 (NIEUWE RONDE) – TORA EN KORAN
 8 november 2026
 
-WAT NIEUW IS
-Op de startpagina, net onder het menu, staat een vriendelijke begroeting:
-- Aangemeld met profielnaam: 'Welkom, <profielnaam>!' (zoals 'Welkom, Patrick!').
-- Aangemeld zonder profielnaam: 'Welkom terug!'.
-- Niet aangemeld: 'Welkom bij Lichtpunt België' en de link 'Aanmelden'.
-- Als de accountcontrole niet beschikbaar is, staat er een neutrale melding.
+INHOUD: 5 HTML-bestanden, rechtstreeks voor de hoofdmap van GitHub
 
-De naam komt alleen uit het Firebase Authentication-account van de
-bezoeker zelf (displayName). Er wordt niets extra opgeslagen.
-De pagina past zich aan als iemand inlogt of uitlogt.
+NIEUW:
+- tora-deuteronomium-03.html – Deuteronomium 6:16–19
+- koran-soera49-16-18.html – Soera 49:16–18
 
-UPLOADEN
-1. Pak deze ZIP uit.
-2. Maak indien gewenst een reservekopie van index.html.
-3. Upload UITSLUITEND index.html naar de hoofdmap van je GitHub-repository.
-4. Vervang het bestaande index.html en klik op Commit changes.
-5. Test de startpagina aangemeld en afgemeld op pc én gsm.
+BIJWERKEN (bestaande pagina's vervangen, niet de andere bestanden):
+- bibliotheek-tora-deuteronomium.html
+- bibliotheek-tora.html
+- bibliotheek-soera-49.html
 
-NIET GEWIJZIGD
-- Deelknoppen, kopieerlink en WhatsApp zijn behouden.
-- Firebase-login, de studievoortgang, vinkjes, notities en studies zijn
-  niet aangepast.
-- De profielnaam wordt met textContent getoond (veilig tegen HTML-injectie).
+WERKWIJZE:
+1. Bewaar voor de zekerheid een kopie van de drie bestaande overzichtspagina's.
+2. Pak de ZIP uit op de pc.
+3. Ga naar https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
+4. Kies Add file -> Upload files in de hoofdmap en sleep de vijf HTML-bestanden naar GitHub.
+5. Bevestig met Commit changes en controleer de website zodra GitHub Pages is bijgewerkt.
+6. Test de drie Deuteronomiumstudies en de drie studies van soera 49. Meld je aan op pc en gsm met HETZELFDE account als je studievoortgang wilt vergelijken.
 
-LET OP
-De bestanden zijn technisch nagekeken maar moeten op de echte
-website nog even getest worden. Als iemand ingelogd is onder een ander
-account, verschijnt vanzelf de profielnaam van dat andere account.
+BELANGRIJK:
+- index.html, account.html, auth-sync.js, studievoortgang.js, study-notes.js,
+  firebase-config.js en lichtpunt-accountstatus.js WORDEN NIET VERVANGEN.
+- De bestaande studie-ID's blijven intact; de nieuwe studies hebben eigen ID's.
+- De nieuwe Koranstudie krijgt een vrijgavedatum 8 november 2026 (vandaag).
+- De Torastudie is meteen beschikbaar.
+- De nieuwe vinkjes kunnen alleen live getest worden na het uploaden.
+
+Als een vinkje toch ontbreekt: controleer eerst of je aangemeld bent.
+Wis geen browsergegevens zolang er twijfel bestaat over de opgeslagen voortgang.
