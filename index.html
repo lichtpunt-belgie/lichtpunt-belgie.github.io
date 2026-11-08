@@ -47,6 +47,23 @@
 .lp-share-strip .lp-share-url{font:inherit;color:#16564e;background:#fff;border:1px solid #d2e5dc;border-radius:8px;padding:8px 10px;width:min(100%,310px);max-width:100%;box-sizing:border-box;cursor:text}
 .lp-share-strip .lp-share-feedback{font-size:.88rem;color:#235f51;line-height:1.5;margin:8px 0 0;min-height:1.2em}
 @media(max-width:520px){.lp-share-strip{padding:15px}.lp-share-strip .lp-share-actions{flex-direction:column;align-items:stretch}.lp-share-strip .lp-share-button,.lp-share-strip .lp-whatsapp,.lp-share-strip .lp-share-copy{width:100%;box-sizing:border-box;text-align:center}.lp-share-strip .lp-share-url{width:100%}}
+
+/* Lichtpunt – persoonlijke begroeting op basis van de echte accountstatus.
+   Alleen weergave: geen wijzigingen aan opslag, Firebase-data of studievoortgang. */
+.lp-home-account-welcome{display:flex;gap:8px 18px;align-items:center;flex-wrap:wrap;
+  margin:0 0 23px;padding:13px 17px;background:#f0f8f4;border:1px solid #d3e5d9;
+  border-radius:14px;color:#184d44;box-shadow:0 4px 12px rgba(20,77,68,.045)}
+.lp-home-account-welcome strong{font-size:1.06rem;line-height:1.4}
+.lp-home-account-welcome .lp-home-account-note{font-size:.9rem;color:#47665c;line-height:1.5}
+.lp-home-account-welcome a{margin-left:auto;color:#145b4e;text-underline-offset:3px;font-size:.9rem;font-weight:700}
+.lp-home-account-welcome[data-state="guest"]{background:#fffaf1;border-color:#ebdec5;color:#78531d}
+.lp-home-account-welcome[data-state="guest"] .lp-home-account-note{color:#755d39}
+.lp-home-account-welcome[data-state="guest"] a{color:#76521b}
+.lp-home-account-welcome[data-state="checking"],.lp-home-account-welcome[data-state="unavailable"]{background:#f8f8f5;border-color:#e4e8e3}
+@media(max-width:640px){.lp-home-account-welcome{display:block;padding:12px 14px}
+ .lp-home-account-welcome strong{display:block;margin-bottom:3px}
+ .lp-home-account-welcome a{display:inline-block;margin-top:6px}}
+
 </style>
 </head>
 <body>
@@ -66,7 +83,12 @@
 </div>
 </header>
 <main id="inhoud">
-<section aria-labelledby="waarom-home-title" class="why-home shell"><div class="why-home-content"><span class="kicker">Voor gelovigen, zoekenden en niet-gelovigen</span><h2 id="waarom-home-title">Ontdek, onderzoek en begrijp</h2>
+<section aria-labelledby="waarom-home-title" class="why-home shell"><div class="why-home-content">
+<div class="lp-home-account-welcome" id="lp-home-account-welcome" data-state="checking" role="status" aria-live="polite">
+<strong id="lp-home-account-title">Welkom bij Lichtpunt België</strong>
+<span class="lp-home-account-note" id="lp-home-account-note">We controleren je aanmelding…</span>
+<a href="account.html" id="lp-home-account-link" hidden>Mijn account</a>
+</div><span class="kicker">Voor gelovigen, zoekenden en niet-gelovigen</span><h2 id="waarom-home-title">Ontdek, onderzoek en begrijp</h2>
 <p>Bij Lichtpunt België bestuderen we de Bijbel, de Tora, de Koran en andere levensbeschouwelijke teksten, met respect voor ieders overtuiging.</p>
 <p>Of je nu gelooft, twijfelt, zoekende bent of helemaal niet gelooft: <strong>iedereen is welkom</strong>.</p>
 <p>Je krijgt hier de vrijheid om zelf te ontdekken, vragen te stellen en andere overtuigingen beter te begrijpen, <strong>zonder je eigen geloof of levensbeschouwing te moeten opgeven of veranderen</strong>.</p>
@@ -223,6 +245,54 @@ Je hoeft nergens bij te horen om welkom te zijn.</p></article><article><span ari
     notify('Kopieer deze link om Lichtpunt door te sturen: '+shareUrl);
     window.prompt('Kopieer deze link om te delen:',shareUrl);
   });
+})();
+</script>
+<script type="module">
+/* Persoonlijke begroeting: lees uitsluitend de bestaande Firebase Auth-sessie. */
+(async () => {
+  const box = document.getElementById('lp-home-account-welcome');
+  const title = document.getElementById('lp-home-account-title');
+  const note = document.getElementById('lp-home-account-note');
+  const link = document.getElementById('lp-home-account-link');
+  if (!box || !title || !note || !link) return;
+
+  function render(state, displayName) {
+    box.dataset.state = state;
+    link.hidden = false;
+    link.href = 'account.html';
+    if (state === 'signed') {
+      // textContent voorkomt dat een zelfgekozen profielnaam als HTML wordt verwerkt.
+      const name = (typeof displayName === 'string' ? displayName.trim() : '').slice(0, 45);
+      title.textContent = name ? `Welkom, ${name}!` : 'Welkom terug!';
+      note.textContent = 'Je bent aangemeld bij je Lichtpunt-account.';
+      link.textContent = 'Mijn account';
+    } else if (state === 'guest') {
+      title.textContent = 'Welkom bij Lichtpunt België';
+      note.textContent = 'Je bent niet aangemeld. Je studievinkjes worden niet met je account gesynchroniseerd.';
+      link.textContent = 'Aanmelden';
+    } else {
+      title.textContent = 'Welkom bij Lichtpunt België';
+      note.textContent = 'Je aanmeldstatus is momenteel niet beschikbaar.';
+      link.textContent = 'Mijn account';
+    }
+  }
+
+  try {
+    const [service, firebaseAuth] = await Promise.all([
+      import('./firebase-service.js'),
+      import('https://www.gstatic.com/firebasejs/13.0.0/firebase-auth.js')
+    ]);
+    if (!service.configured || !service.auth) {
+      render('unavailable');
+      return;
+    }
+    firebaseAuth.onAuthStateChanged(service.auth,
+      (user) => render(user ? 'signed' : 'guest', user?.displayName),
+      () => render('unavailable')
+    );
+  } catch (_) {
+    render('unavailable');
+  }
 })();
 </script>
 </body></html>

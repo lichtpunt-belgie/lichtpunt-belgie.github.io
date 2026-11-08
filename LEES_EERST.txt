@@ -1,38 +1,31 @@
-LICHTPUNT BELGIË – ACCOUNTSTATUS BIJ DE STUDIES
+LICHTPUNT BELGIË – PERSOONLIJKE BEGROETING OP STARTPAGINA
 8 november 2026
 
-WAT VERANDERT ER?
-Bovenaan acht studieoverzichten verschijnt een duidelijke melding:
-- ✓ Je bent aangemeld – je studievoortgang is aan je account gekoppeld.
-- ⚠ Je bent niet aangemeld – vinkjes blijven op dit toestel, zonder accountsynchronisatie.
-- Bij onzekerheid staat er eerst: Aanmelding controleren…
+WAT NIEUW IS
+Op de startpagina, net onder het menu, staat een vriendelijke begroeting:
+- Aangemeld met profielnaam: 'Welkom, <profielnaam>!' (zoals 'Welkom, Patrick!').
+- Aangemeld zonder profielnaam: 'Welkom terug!'.
+- Niet aangemeld: 'Welkom bij Lichtpunt België' en de link 'Aanmelden'.
+- Als de accountcontrole niet beschikbaar is, staat er een neutrale melding.
 
-WAT BLIJFT ONGEWIJZIGD?
-De bestaande aanmelding, Firebase-gegevens, studievinkjes, notities,
-voortgangscodes, lessen en publicatiedatums worden niet aangepast.
-De nieuwe code leest alleen de Firebase-aanmeldstatus en schrijft niets weg.
+De naam komt alleen uit het Firebase Authentication-account van de
+bezoeker zelf (displayName). Er wordt niets extra opgeslagen.
+De pagina past zich aan als iemand inlogt of uitlogt.
 
-UPLOADEN NAAR GITHUB
-1. Behoud de eerder gemaakte reservekopie van je studievoortgang.
-2. Pak de ZIP uit en maak bij voorkeur een back-up van de acht HTML-pagina's.
-3. Upload de 9 bestanden in dit pakket naar de hoofdmap:
-   - lichtpunt-accountstatus.js (nieuw)
-   - bijbelstudies.html
-   - bibliotheek-boek-genesis.html
-   - bibliotheek-boek-exodus.html
-   - bibliotheek-boek-johannes.html
-   - bibliotheek-boek-romeinen.html
-   - bibliotheek-tora.html
-   - bibliotheek-tora-deuteronomium.html
-   - bibliotheek-soera-49.html
-4. Kies Commit changes.
-5. Open een bijgewerkte overzichtspagina op pc en gsm.
-   Bij aangemeld hoort 'Je bent aangemeld' te verschijnen;
-   zonder account verschijnt 'Je bent niet aangemeld'.
+UPLOADEN
+1. Pak deze ZIP uit.
+2. Maak indien gewenst een reservekopie van index.html.
+3. Upload UITSLUITEND index.html naar de hoofdmap van je GitHub-repository.
+4. Vervang het bestaande index.html en klik op Commit changes.
+5. Test de startpagina aangemeld en afgemeld op pc én gsm.
 
-OPMERKING
-De melding staat nu op deze acht overzichtspagina's. Andere oudere
-lespagina's krijgen de statusmelding pas bij een volgende gecontroleerde
-uitbreiding, om niet tientallen bestaande bestanden te overschrijven.
-De melding is geen bevestiging dat elk recent vinkje al online is opgeslagen;
-dat wordt afzonderlijk door de voortgangsfunctie gecontroleerd.
+NIET GEWIJZIGD
+- Deelknoppen, kopieerlink en WhatsApp zijn behouden.
+- Firebase-login, de studievoortgang, vinkjes, notities en studies zijn
+  niet aangepast.
+- De profielnaam wordt met textContent getoond (veilig tegen HTML-injectie).
+
+LET OP
+De bestanden zijn technisch nagekeken maar moeten op de echte
+website nog even getest worden. Als iemand ingelogd is onder een ander
+account, verschijnt vanzelf de profielnaam van dat andere account.
