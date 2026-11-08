@@ -1,23 +1,21 @@
-LICHTPUNT BELGIË — UPDATE OUDE TESTAMENT (8 NOVEMBER 2026)
+LICHTPUNT BELGIË – UPDATE 6, NIEUWE TESTAMENT – 8 NOVEMBER 2026
 
-Dit pakket bevat 16 HTML-bestanden voor de hoofdmap van de bestaande GitHub-website:
-- 7 nieuwe lessen Genesis 6 (genesis-week6-dag1.html t/m dag7.html)
-- 7 nieuwe lessen Exodus 3 (exodus-week3-dag1.html t/m dag7.html)
-- bibliotheek-boek-genesis.html (boekoverzicht, inclusief alle 42 lessen)
-- bibliotheek-boek-exodus.html (boekoverzicht, inclusief alle 21 lessen)
+Inhoud: 14 nieuwe lessen en twee bijgewerkte overzichten.
 
-PUBLICATIEDATUMS
-Exodus 3: 13–19 november 2026 (één les per dag)
-Genesis 6: 16–22 november 2026 (één les per dag)
+- Johannes 4: johannes-26.html t/m johannes-32.html (13 t/m 19 november 2026).
+- Romeinen 3: romeinen-15.html t/m romeinen-21.html (13 t/m 19 november 2026).
+- bibliotheek-boek-johannes.html en bibliotheek-boek-romeinen.html (bestaande overzichten aanvullen).
 
-INSTALLEREN
-1. Maak eerst een reservekopie van de bestaande bestanden bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
-2. Pak de ZIP uit op je computer.
-3. Upload de 16 HTML-bestanden in de HOOFDMAP van je repository lichtpunt-belgie.github.io.
-4. Kies Commit changes. Laat de bestaande CSS-, JS- en andere HTML-bestanden ongemoeid.
-5. Test op computer en gsm een nieuwe les, het overzicht, afvinken, persoonlijke antwoorden en accountnotities.
+INSTALLATIE
+1. Maak voor de zekerheid een reservekopie van de twee bestaande boekoverzichten.
+2. Pak deze ZIP uit.
+3. Open https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
+4. Kies Add file > Upload files en selecteer de 16 HTML-bestanden uit dit pakket.
+5. Commit changes.
+6. Controleer de site op pc en gsm, inclusief persoonlijke vinkjes en notities.
 
-De twee overzichten zijn gebaseerd op de laatst beschikbare updatebestanden van 6 november 2026. Controleer eventuele tussentijdse wijzigingen voor het overschrijven: een nieuwere versie van de overzichtspagina zou anders verloren kunnen gaan.
+De bestaande lespagina's, het accountgedeelte, Firebase-bestanden, CSS en JavaScript worden NIET overschreven.
+De nieuwe lessen gebruiken dezelfde bestaande data-study-series en unieke data-study-id's.
 
-Bron: eigen Nederlandse werkvertalingen uit de Masoretische tekst, met koppeling naar de Hebreeuwse brontekst. Geen letterlijke overname van moderne Bijbelvertalingen.
-Deze ZIP bevat geen bestaande lesbestanden en geen account- of databasebestanden.
+Teksten: eigen vrije Nederlandse werkvertaling, zorgvuldig lezen en vergelijken met een eigen Bijbel wordt aangemoedigd.
+Kanttekening: de geplande vrijgave wordt door de bestaande vrijgave.js geregeld.
