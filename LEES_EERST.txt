@@ -1,32 +1,31 @@
-LICHTPUNT BELGIË – UPDATE 3 (NIEUWE RONDE) – TORA EN KORAN
+LICHTPUNT BELGIË — UPDATE 4: GELOOF DOOR DE EEUWEN, DEEL 4
 8 november 2026
 
-INHOUD: 5 HTML-bestanden, rechtstreeks voor de hoofdmap van GitHub
+Bestanden in deze ZIP:
+- geloof-door-de-eeuwen.html  (bestaande tijdlijnoverzicht, bijgewerkt)
+- geschiedenis-tradities-wijsheid.html  (NIEUWE uitgebreide geschiedenisles)
+- geschiedenis-orakelbeen-artistieke-impressie.jpg  (zelfgemaakt sfeerbeeld bij nieuwe les)
 
-NIEUW:
-- tora-deuteronomium-03.html – Deuteronomium 6:16–19
-- koran-soera49-16-18.html – Soera 49:16–18
+INSTALLATIE
+1. Maak een reservekopie van het huidige bestand geloof-door-de-eeuwen.html in je GitHub-repository.
+2. Pak deze ZIP uit op je computer.
+3. Upload de drie bovenstaande bestanden (NIET de handleiding) naar de HOOFDMAP van
+   https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
+4. Vervang uitsluitend geloof-door-de-eeuwen.html; de andere twee bestanden zijn nieuw.
+5. Klik op Commit changes. Controleer na de publicatie in een nieuw tabblad:
+   https://lichtpunt-belgie.github.io/geloof-door-de-eeuwen.html
+   https://lichtpunt-belgie.github.io/geschiedenis-tradities-wijsheid.html
 
-BIJWERKEN (bestaande pagina's vervangen, niet de andere bestanden):
-- bibliotheek-tora-deuteronomium.html
-- bibliotheek-tora.html
-- bibliotheek-soera-49.html
+CONTROLE
+- Deel 1, 2 en 3 moeten ongewijzigd beschikbaar blijven.
+- Deel 4 moet als aanklikbare kaart in het overzicht verschijnen.
+- De afbeelding moet geladen worden en het onderschrift 'artistieke impressie' tonen.
+- Controleer het afvinkvakje en een notitie met dezelfde ingelogde account op pc en gsm.
+- Niet opnieuw vinkjes zetten zonder inloggen; de bestaande accountgegevens blijven behouden.
 
-WERKWIJZE:
-1. Bewaar voor de zekerheid een kopie van de drie bestaande overzichtspagina's.
-2. Pak de ZIP uit op de pc.
-3. Ga naar https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
-4. Kies Add file -> Upload files in de hoofdmap en sleep de vijf HTML-bestanden naar GitHub.
-5. Bevestig met Commit changes en controleer de website zodra GitHub Pages is bijgewerkt.
-6. Test de drie Deuteronomiumstudies en de drie studies van soera 49. Meld je aan op pc en gsm met HETZELFDE account als je studievoortgang wilt vergelijken.
-
-BELANGRIJK:
-- index.html, account.html, auth-sync.js, studievoortgang.js, study-notes.js,
-  firebase-config.js en lichtpunt-accountstatus.js WORDEN NIET VERVANGEN.
-- De bestaande studie-ID's blijven intact; de nieuwe studies hebben eigen ID's.
-- De nieuwe Koranstudie krijgt een vrijgavedatum 8 november 2026 (vandaag).
-- De Torastudie is meteen beschikbaar.
-- De nieuwe vinkjes kunnen alleen live getest worden na het uploaden.
-
-Als een vinkje toch ontbreekt: controleer eerst of je aangemeld bent.
-Wis geen browsergegevens zolang er twijfel bestaat over de opgeslagen voortgang.
+BELANGRIJK
+Deze update vervangt GEEN account-, Firebase- of voortgangsbestanden.
+De studie gebruikt dezelfde data-attributen, studievoortgang.js en auth-sync.js als deel 3,
+met een NIEUWE en unieke studie-ID 'geschiedenis-tradities-wijsheid'.
+De afbeelding is AI-gegenereerd en is geen foto van een museumvoorwerp.
+Het live resultaat en de synchronisatie kunnen alleen na het uploaden worden getest.
