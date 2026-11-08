@@ -1,21 +1,38 @@
-LICHTPUNT BELGIË – UPDATE 6, NIEUWE TESTAMENT – 8 NOVEMBER 2026
+LICHTPUNT BELGIË – ACCOUNTSTATUS BIJ DE STUDIES
+8 november 2026
 
-Inhoud: 14 nieuwe lessen en twee bijgewerkte overzichten.
+WAT VERANDERT ER?
+Bovenaan acht studieoverzichten verschijnt een duidelijke melding:
+- ✓ Je bent aangemeld – je studievoortgang is aan je account gekoppeld.
+- ⚠ Je bent niet aangemeld – vinkjes blijven op dit toestel, zonder accountsynchronisatie.
+- Bij onzekerheid staat er eerst: Aanmelding controleren…
 
-- Johannes 4: johannes-26.html t/m johannes-32.html (13 t/m 19 november 2026).
-- Romeinen 3: romeinen-15.html t/m romeinen-21.html (13 t/m 19 november 2026).
-- bibliotheek-boek-johannes.html en bibliotheek-boek-romeinen.html (bestaande overzichten aanvullen).
+WAT BLIJFT ONGEWIJZIGD?
+De bestaande aanmelding, Firebase-gegevens, studievinkjes, notities,
+voortgangscodes, lessen en publicatiedatums worden niet aangepast.
+De nieuwe code leest alleen de Firebase-aanmeldstatus en schrijft niets weg.
 
-INSTALLATIE
-1. Maak voor de zekerheid een reservekopie van de twee bestaande boekoverzichten.
-2. Pak deze ZIP uit.
-3. Open https://github.com/lichtpunt-belgie/lichtpunt-belgie.github.io
-4. Kies Add file > Upload files en selecteer de 16 HTML-bestanden uit dit pakket.
-5. Commit changes.
-6. Controleer de site op pc en gsm, inclusief persoonlijke vinkjes en notities.
+UPLOADEN NAAR GITHUB
+1. Behoud de eerder gemaakte reservekopie van je studievoortgang.
+2. Pak de ZIP uit en maak bij voorkeur een back-up van de acht HTML-pagina's.
+3. Upload de 9 bestanden in dit pakket naar de hoofdmap:
+   - lichtpunt-accountstatus.js (nieuw)
+   - bijbelstudies.html
+   - bibliotheek-boek-genesis.html
+   - bibliotheek-boek-exodus.html
+   - bibliotheek-boek-johannes.html
+   - bibliotheek-boek-romeinen.html
+   - bibliotheek-tora.html
+   - bibliotheek-tora-deuteronomium.html
+   - bibliotheek-soera-49.html
+4. Kies Commit changes.
+5. Open een bijgewerkte overzichtspagina op pc en gsm.
+   Bij aangemeld hoort 'Je bent aangemeld' te verschijnen;
+   zonder account verschijnt 'Je bent niet aangemeld'.
 
-De bestaande lespagina's, het accountgedeelte, Firebase-bestanden, CSS en JavaScript worden NIET overschreven.
-De nieuwe lessen gebruiken dezelfde bestaande data-study-series en unieke data-study-id's.
-
-Teksten: eigen vrije Nederlandse werkvertaling, zorgvuldig lezen en vergelijken met een eigen Bijbel wordt aangemoedigd.
-Kanttekening: de geplande vrijgave wordt door de bestaande vrijgave.js geregeld.
+OPMERKING
+De melding staat nu op deze acht overzichtspagina's. Andere oudere
+lespagina's krijgen de statusmelding pas bij een volgende gecontroleerde
+uitbreiding, om niet tientallen bestaande bestanden te overschrijven.
+De melding is geen bevestiging dat elk recent vinkje al online is opgeslagen;
+dat wordt afzonderlijk door de voortgangsfunctie gecontroleerd.
