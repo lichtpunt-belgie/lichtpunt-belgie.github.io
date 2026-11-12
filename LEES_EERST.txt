@@ -1,2 +1,2 @@
-Lichtpunt België – Genesis 7 en Exodus 4
+Lichtpunt België – Johannes 5 en Romeinen 4
 Upload de 14 nieuwe lesbestanden en de twee bijgewerkte boekoverzichten naar de hoofdmap van GitHub. Maak vooraf een kopie van de twee overzichten. Laat bestaande JS, vinkjes en accountbestanden ongemoeid. Controleer op pc en gsm.
