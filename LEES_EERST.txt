@@ -1,1 +1,1 @@
-Lichtpunt België – Tora en Koran. Upload 2 nieuwe lesbestanden en de 3 bijgewerkte overzichten naar GitHub. Maak van die overzichten een reservekopie. Eerdere lessen, studie-ID’s, scripts en accounts blijven behouden.
+Lichtpunt België – Geloof door de eeuwen heen, deel 5. Upload de nieuwe geschiedenisles, de bijgewerkte tijdlijn en de JPG-afbeelding in de hoofdmap van GitHub. Maak vooraf een reservekopie van geloof-door-de-eeuwen.html. De afbeelding is een artistieke impressie, geen museumfoto.
