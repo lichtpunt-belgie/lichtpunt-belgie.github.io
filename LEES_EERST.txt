@@ -1,31 +1,14 @@
-LICHTPUNT BELGIË – 30 NIEUWE LICHTPUNTJES
-Reeks 142–171 | 2 tot en met 31 december 2026
+LICHTPUNT BELGIË – CORRECTIE LAYOUT DECEMBER 2026
 
-KLAAR VOOR GITHUB
-Deze update voegt dagelijks één nieuw Lichtpuntje toe, met meer tekst.
-24, 25 en 26 december hebben extra kerstversiering en warme, inclusieve teksten.
+Deze ZIP bevat alleen 30 herziene afbeeldingen van Lichtpuntjes 142–171 (2 tot en met 31 december 2026).
 
-UPLOADEN (in deze volgorde)
-1. Maak eerst een reservekopie van de bestaande index.html en lichtpuntjes.html.
-2. Pak deze ZIP volledig uit.
-3. Upload naar de HOOFDMAP van GitHub:
-   - index.html (vervangt het bestaande)
-   - lichtpuntjes.html (vervangt het bestaande)
-   - lichtpuntjes-december-2026.js (nieuw)
-   - lichtpuntjes-december-2026.css (nieuw)
-   - de 30 JPEG-bestanden UIT de map assets, in de bestaande GitHub-map assets.
-4. Upload de map assets bij voorkeur ALS MAP en behoud de padstructuur.
-5. Klik Commit changes en test daarna op pc en gsm.
+Aanpassing: TITEL staat nu BOVEN de eerste sierlijn met hartje. De duif, hartjes, bloemen, langere teksten, kerstaccenten op 24–26 december en de rest van het vaste sjabloon blijven behouden. Geen datum onderaan.
 
-NIET uploaden: LICHTPUNTJES_142-171_INHOUD.json (alleen redactiebestand), build.py.
-
-BELANGRIJK
-- 'lichtpuntjes.js' wordt NIET overschreven. Alle oude 98–141 blijven intact.
-- De nieuwe reeks wordt zichtbaar van 2 tot 31 december, volgens kalenderdatum Europe/Brussels.
-- De bestanden staan wel publiek op GitHub, ook voor de vrijgavedatum.
-- De startpagina is gebaseerd op de eerder geteste 8 november-versie met persoonlijke welkomstgroet. Controleer op GitHub of index.html nadien niet is aangepast voordat je hem vervangt.
-- De account- en studievoortgangsbestanden wijzigen we niet.
-- In het originele script zijn oudere lichtpuntjes in het archief zichtbaar; de decembermodule vult de nieuwe nummers aan zonder de oude te verwijderen.
-- Test na 2 december of het dagelijks nieuwe Lichtpuntje op de startpagina en in het archief verschijnt.
-
-Gemaakt als websitepakket voor Lichtpunt België.
+UPLOAD NAAR GITHUB:
+1. Pak de ZIP uit.
+2. Open de bestaande map assets (eventueel vertaald als Activa) van de website op GitHub.
+3. Klik op Bestand toevoegen > Bestanden uploaden.
+4. Selecteer uitsluitend de 30 JPG-bestanden uit de uitgepakte map assets.
+5. Bevestig de vervanging van de gelijknamige bestanden en klik op Commit changes.
+6. Upload GEEN oude HTML-, JS- of CSS-bestanden en verwijder geen bestaande bestanden.
+7. Bekijk daarna b.v. 145 en 165 om de volgorde duif > titel > sierlijn > tekst te controleren.
