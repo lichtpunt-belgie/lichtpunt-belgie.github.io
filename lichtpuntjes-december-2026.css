@@ -1,0 +1,6 @@
+/* Aanvullende decemberaccenten; bestaande site-opmaak blijft intact. */
+.lp-kerst-card {border-color:#e5ce9b!important;box-shadow:0 12px 30px rgba(108,72,31,.13)!important}
+.lp-holiday-tag {align-self:flex-start;display:inline-block;padding:5px 11px;margin:0 0 10px;border-radius:999px;color:#705126;background:#f6ecd9;font-size:12px;font-weight:700;letter-spacing:.03em}
+.lp-december-card .lp-archive-copy p {line-height:1.65;font-size:15px;white-space:normal}
+.lp-december-card .lp-archive-photo {background:#f6f2e8}
+@media(max-width:600px){.lp-december-card .lp-archive-copy p{font-size:14px;line-height:1.65}}
