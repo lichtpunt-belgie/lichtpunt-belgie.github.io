@@ -1,14 +1,22 @@
-LICHTPUNT BELGIË – CORRECTIE LAYOUT DECEMBER 2026
+LICHTPUNT BELGIË – FEESTELIJKE CORRECTIE
 
-Deze ZIP bevat alleen 30 herziene afbeeldingen van Lichtpuntjes 142–171 (2 tot en met 31 december 2026).
+Vervang op GitHub in assets alleen deze ACHT bestaande afbeeldingen:
+161, 162, 163, 164, 165, 166, 167 (kerstweek 21–27 december 2026)
+171 (oudejaar 31 december 2026).
 
-Aanpassing: TITEL staat nu BOVEN de eerste sierlijn met hartje. De duif, hartjes, bloemen, langere teksten, kerstaccenten op 24–26 december en de rest van het vaste sjabloon blijven behouden. Geen datum onderaan.
+Aanpassingen:
+- Vast sjabloon met duif, bloemen, hartjes en titel boven de sierlijn.
+- Kerstbal en kleine takjes bovenaan, ver uit de buurt van de tekst.
+- Oudejaar: champagnefles, glazen en gouden sterretjes, bovenaan links.
+- Geen nieuwe datums of HTML-wijzigingen.
+- Alle andere decemberafbeeldingen blijven zoals ze zijn.
 
-UPLOAD NAAR GITHUB:
-1. Pak de ZIP uit.
-2. Open de bestaande map assets (eventueel vertaald als Activa) van de website op GitHub.
-3. Klik op Bestand toevoegen > Bestanden uploaden.
-4. Selecteer uitsluitend de 30 JPG-bestanden uit de uitgepakte map assets.
-5. Bevestig de vervanging van de gelijknamige bestanden en klik op Commit changes.
-6. Upload GEEN oude HTML-, JS- of CSS-bestanden en verwijder geen bestaande bestanden.
-7. Bekijk daarna b.v. 145 en 165 om de volgorde duif > titel > sierlijn > tekst te controleren.
+Apart in de ZIP staat een VOORBEELD voor nummer 172 (1 januari 2027).
+Dat bestand NIET op de huidige website uploaden. Het hoort bij de volgende reeks en is nog NIET ingepland in de websitecode.
+
+UPLOAD:
+1. Open GitHub > map assets (of Activa).
+2. Upload uitsluitend de acht JPG-bestanden uit de map assets.
+3. Laat 172 in de aparte map 'volgende_reeks_niet_uploaden' staan.
+4. Commit changes.
+5. Controleer bijvoorbeeld 166 en 171.
