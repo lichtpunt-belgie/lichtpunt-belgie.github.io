@@ -1,15 +1,14 @@
-LICHTPUNT BELGIË — UPDATE 14 — GENESIS 9 / EXODUS 6
+LICHTPUNT BELGIË — UPDATE 15 — GENESIS 10 / EXODUS 7
 
 14 nieuwe lessen en 2 bijgewerkte boekoverzichten.
-Genesis 9: 7 lessen, 7 t/m 13 december 2026.
-Exodus 6: 7 lessen, 4 t/m 10 december 2026.
+Genesis 10: 7 lessen, 14 t/m 20 december 2026.
+Exodus 7: 7 lessen, 11 t/m 17 december 2026.
 
-1. Maak een kopie van de twee huidige boekoverzichten.
-2. Pak deze ZIP lokaal uit.
-3. Upload uitsluitend de 16 HTML-bestanden uit de hoofdmap van deze ZIP naar de hoofdmap van je GitHub Pages-repository.
-4. Vervang alleen bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
+1. Bewaar vooraf een reservekopie van bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
+2. Pak de ZIP uit.
+3. Upload uitsluitend de 16 HTML-bestanden naar de hoofdmap van de bestaande GitHub Pages-repository.
+4. Vervang alleen de twee bestaande boekoverzichten.
 5. Klik op Commit changes.
-6. Controleer op pc en gsm de overzichten, de beschikbaarheid per datum, aanmelden, notities en bestaande vinkjes.
+6. Controleer op pc en gsm: links, publicatiedatums, aanmelding, notities en bestaande vinkjes.
 
-Bestaande lessen en JavaScript/Firebase-bestanden zijn niet in deze ZIP opgenomen. Bestaande studie-ID's worden niet aangepast.
-Deze bestanden zijn technisch gecontroleerd, maar de online werking moet na upload nog worden getest.
+De overige websitebestanden, voorgaande lessen en Firebase-scripts worden niet gewijzigd. De 14 nieuwe lessen kregen unieke studie-ID's. Technische bestandscontrole is uitgevoerd; online werking nog te testen.
