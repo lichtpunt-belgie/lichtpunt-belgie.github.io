@@ -1,19 +1,14 @@
-LICHTPUNT BELGIË – TORA & KORAN TOT 15 JANUARI 2027
+LICHTPUNT BELGIË — GELOOF DOOR DE EEUWEN HEEN — 25 november 2026
 
-Deze ZIP bevat 16 nieuwe lessen (8 Tora, 8 Koran), drie bijgewerkte overzichten en een publicatieoverzicht.
+Eén update met deel 6–13 (2e t/m 9e eeuw), elke vrijdag vanaf 27 november 2026 t/m 15 januari 2027.
 
-Publicatie: elke vrijdag 27-11, 04-12, 11-12, 18-12, 25-12, 01-01, 08-01, 15-01.
+UPLOAD naar de hoofdmap van GitHub:
+- geloof-door-de-eeuwen.html (bestaand overzicht vervangen)
+- geschiedenis-tweede-eeuw.html tot en met geschiedenis-negende-eeuw.html (8 nieuwe bestanden)
 
-UPLOAD NAAR GITHUB
-- Pak de ZIP lokaal uit.
-- Upload uitsluitend de 19 HTML-bestanden naar de hoofdmap van de website.
-- Vervang de drie bestaande overzichten: bibliotheek-tora-deuteronomium.html, bibliotheek-soera-49.html, bibliotheek-tora.html.
-- Upload geen JavaScript of CSS; die blijven ongewijzigd.
-- De .csv en dit tekstbestand zijn uitsluitend voor eigen overzicht.
+De overzichten en de toekomstige studies hebben vrijgavedatums. De pagina's gebruiken de bestaande bestanden styles.css, studievoortgang.js, auth-sync.js, study-notes.js en vrijgave.js. Pas deze scripts NIET aan.
 
-CONTROLEER
-- Of de datum in de kaartjes van de beide reeksen zichtbaar is.
-- Of de 16 nieuwe pagina's op de juiste datum opengaan.
-- Of de nieuwe vinkjes en privé-notities na aanmelden bewaard blijven.
+Het publicatieoverzicht CSV en dit bestand hoef je NIET te uploaden.
+Maak voor de zekerheid een kopie van de oude tijdlijn en test de opmaak, de vergrendeling, het vinkje en notities op pc en iPhone.
 
-Bij de Koranstudies 11–12 zijn 2 afsluitende themastudies opgenomen waarin eerdere passages opnieuw worden verbonden; ze vervangen geen bestaande pagina's.
+BELANGRIJK: De geschiedenisles bevat geen nieuwe afbeelding; eerder gebruikte historische afbeeldingen blijven op de website aanwezig. Historische gebeurtenissen zijn zorgvuldig als geschiedenis, interpretaties als interpretaties weergegeven.
