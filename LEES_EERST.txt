@@ -1,19 +1,21 @@
-LICHTPUNT BELGIË – UPDATE 18 | Genesis 13 + Exodus 10
-25 november 2026
+LICHTPUNT BELGIË – JOHANNES TOT 15 JANUARI 2027
 
-Deze ZIP bevat 14 nieuwe lespagina's en de twee bijgewerkte boekoverzichten.
+Inhoud:
+- bibliotheek-boek-johannes.html (bijgewerkt overzicht met 89 lessen)
+- johannes-40.html t/m johannes-89.html (50 nieuwe lessen)
+- PUBLICATIEOVERZICHT_JOHANNES.csv
 
-GENESIS 13: 7 lessen – 4 tot en met 10 januari 2027.
-EXODUS 10: 7 lessen – 1 tot en met 7 januari 2027.
+Periode: 27 november 2026 t/m 15 januari 2027; elke dag een nieuwe les.
+Upload naar de HOOFDMAP van de GitHub-repository. Maak vooraf een reservekopie
+van bibliotheek-boek-johannes.html. Alleen dit bestaande bestand overschrijven.
+De eerste 39 lessen en de .js- en .css-bestanden niet vervangen.
 
-GITHUB
-1. Maak een reservekopie van bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
-2. Pak de ZIP uit.
-3. Upload de 16 HTML-bestanden naar de HOOFDMAP van lichtpunt-belgie.github.io.
-4. Vervang alleen de twee boekoverzichten; de 14 nieuwe lespagina's zijn nieuwe bestanden.
-5. Klik op Commit changes.
-6. Test de boekoverzichten, toekomstige vrijgavedatums en voortgang op pc en gsm (met hetzelfde account aangemeld).
+Controleer op pc én gsm: de leslinks, toekomstige vergrendeling,
+accountaanmelding, vinkjes en notities.
 
-De bestaande studiecodes, auth-sync.js, studievoortgang.js en notitiebestanden zijn NIET gewijzigd.
-Deze studiepagina's hebben de bestaande scripts op de website nodig om vrijgave, vinkjes en notities te laten werken.
-De publicatiedatum is geen beveiligingsmaatregel tegen rechtstreeks openen via een bestandslink.
+LET OP: De samenvattingen in eigen woorden zijn parafrases,
+geen volledige Bijbelvertalingen. Gebruik een afzonderlijke Bijbeluitgave
+om de tekst woordelijk na te lezen.
+
+Deze ZIP bevat nieuwe content en het gewijzigde overzicht; er zijn
+GEEN wijzigingen aan Firebase, accountbeveiliging of opslagcode.
