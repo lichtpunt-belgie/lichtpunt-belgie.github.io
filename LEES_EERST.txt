@@ -1,26 +1,19 @@
-LICHTPUNT BELGIË – ROMEINEN TOT 15 JANUARI 2027
+LICHTPUNT BELGIË – TORA & KORAN TOT 15 JANUARI 2027
 
-INHOUD
-- 50 nieuwe lessen: romeinen-29.html tot en met romeinen-78.html
-- Bijgewerkt overzicht: bibliotheek-boek-romeinen.html
-- PUBLICATIEOVERZICHT_ROMEINEN.csv (alleen voor jezelf)
+Deze ZIP bevat 16 nieuwe lessen (8 Tora, 8 Koran), drie bijgewerkte overzichten en een publicatieoverzicht.
 
-PUBLICATIE
-27 november 2026 t/m 15 januari 2027: iedere dag één nieuwe les.
+Publicatie: elke vrijdag 27-11, 04-12, 11-12, 18-12, 25-12, 01-01, 08-01, 15-01.
 
-UPLOAD
-1. Download het ZIP-bestand en pak uit.
-2. Maak vooraf een kopie van je bestaande bibliotheek-boek-romeinen.html.
-3. Upload de 51 HTML-bestanden in de hoofdmap van je GitHub-repository.
-4. Alleen bibliotheek-boek-romeinen.html van bestaande bestanden overschrijven.
-5. Upload LEES_EERST.txt en de CSV NIET naar de website.
-6. Test bij Romeinen 29 de zichtbare datum, vrijgave, links, vinkjes en notities.
+UPLOAD NAAR GITHUB
+- Pak de ZIP lokaal uit.
+- Upload uitsluitend de 19 HTML-bestanden naar de hoofdmap van de website.
+- Vervang de drie bestaande overzichten: bibliotheek-tora-deuteronomium.html, bibliotheek-soera-49.html, bibliotheek-tora.html.
+- Upload geen JavaScript of CSS; die blijven ongewijzigd.
+- De .csv en dit tekstbestand zijn uitsluitend voor eigen overzicht.
 
-Bestaande lessen 1–28 en hun data-study-id blijven ongewijzigd.
-Er zijn geen wijzigingen aan JavaScript, Firebase of CSS.
-Nieuwe lesbestanden gebruiken de reeds bestaande .release-pending en
-.scheduled-study indeling, zoals Romeinen 28.
+CONTROLEER
+- Of de datum in de kaartjes van de beide reeksen zichtbaar is.
+- Of de 16 nieuwe pagina's op de juiste datum opengaan.
+- Of de nieuwe vinkjes en privé-notities na aanmelden bewaard blijven.
 
-De Bijbelteksten zijn samengevat in eigen woorden; raadpleeg je eigen
-Bijbelvertaling voor de tekst zelf. De beschrijvingen zijn niet bedoeld
-om andere overtuigingen te veroordelen.
+Bij de Koranstudies 11–12 zijn 2 afsluitende themastudies opgenomen waarin eerdere passages opnieuw worden verbonden; ze vervangen geen bestaande pagina's.
