@@ -1,14 +1,19 @@
-LICHTPUNT BELGIË — UPDATE 17 — GENESIS 12 / EXODUS 9
+LICHTPUNT BELGIË – UPDATE 18 | Genesis 13 + Exodus 10
+25 november 2026
 
-14 nieuwe lessen + 2 bijgewerkte boekoverzichten.
-Genesis 12: 28 december 2026 t/m 3 januari 2027.
-Exodus 9: 25 t/m 31 december 2026.
+Deze ZIP bevat 14 nieuwe lespagina's en de twee bijgewerkte boekoverzichten.
 
-1. Maak een reservekopie van bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html op GitHub.
-2. Pak de ZIP uit. Upload de 16 HTML-bestanden naar de hoofdmap van de bestaande repository.
-3. Vervang uitsluitend de twee boekoverzichten. Laat alle andere bestanden staan.
-4. Commit changes en controleer op pc/gsm links, latere vrijgave, accountstatus en voortgang.
+GENESIS 13: 7 lessen – 4 tot en met 10 januari 2027.
+EXODUS 10: 7 lessen – 1 tot en met 7 januari 2027.
 
-Geen wijzigingen aan Firebase, auth-sync.js, studievoortgang.js of notitiescripts.
-De passages zijn eigen samenvattingen: lees de volledige Bijbeltekst in een erkende vertaling.
-De pagina's staan door de geplande datums nog niet meteen voor iedereen open.
+GITHUB
+1. Maak een reservekopie van bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
+2. Pak de ZIP uit.
+3. Upload de 16 HTML-bestanden naar de HOOFDMAP van lichtpunt-belgie.github.io.
+4. Vervang alleen de twee boekoverzichten; de 14 nieuwe lespagina's zijn nieuwe bestanden.
+5. Klik op Commit changes.
+6. Test de boekoverzichten, toekomstige vrijgavedatums en voortgang op pc en gsm (met hetzelfde account aangemeld).
+
+De bestaande studiecodes, auth-sync.js, studievoortgang.js en notitiebestanden zijn NIET gewijzigd.
+Deze studiepagina's hebben de bestaande scripts op de website nodig om vrijgave, vinkjes en notities te laten werken.
+De publicatiedatum is geen beveiligingsmaatregel tegen rechtstreeks openen via een bestandslink.
