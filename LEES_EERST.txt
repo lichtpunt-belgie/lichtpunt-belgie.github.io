@@ -1,19 +1,26 @@
-LICHTPUNT BELGIË – UPDATE 18 | Genesis 13 + Exodus 10
-25 november 2026
+LICHTPUNT BELGIË – ROMEINEN TOT 15 JANUARI 2027
 
-Deze ZIP bevat 14 nieuwe lespagina's en de twee bijgewerkte boekoverzichten.
+INHOUD
+- 50 nieuwe lessen: romeinen-29.html tot en met romeinen-78.html
+- Bijgewerkt overzicht: bibliotheek-boek-romeinen.html
+- PUBLICATIEOVERZICHT_ROMEINEN.csv (alleen voor jezelf)
 
-GENESIS 13: 7 lessen – 4 tot en met 10 januari 2027.
-EXODUS 10: 7 lessen – 1 tot en met 7 januari 2027.
+PUBLICATIE
+27 november 2026 t/m 15 januari 2027: iedere dag één nieuwe les.
 
-GITHUB
-1. Maak een reservekopie van bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
-2. Pak de ZIP uit.
-3. Upload de 16 HTML-bestanden naar de HOOFDMAP van lichtpunt-belgie.github.io.
-4. Vervang alleen de twee boekoverzichten; de 14 nieuwe lespagina's zijn nieuwe bestanden.
-5. Klik op Commit changes.
-6. Test de boekoverzichten, toekomstige vrijgavedatums en voortgang op pc en gsm (met hetzelfde account aangemeld).
+UPLOAD
+1. Download het ZIP-bestand en pak uit.
+2. Maak vooraf een kopie van je bestaande bibliotheek-boek-romeinen.html.
+3. Upload de 51 HTML-bestanden in de hoofdmap van je GitHub-repository.
+4. Alleen bibliotheek-boek-romeinen.html van bestaande bestanden overschrijven.
+5. Upload LEES_EERST.txt en de CSV NIET naar de website.
+6. Test bij Romeinen 29 de zichtbare datum, vrijgave, links, vinkjes en notities.
 
-De bestaande studiecodes, auth-sync.js, studievoortgang.js en notitiebestanden zijn NIET gewijzigd.
-Deze studiepagina's hebben de bestaande scripts op de website nodig om vrijgave, vinkjes en notities te laten werken.
-De publicatiedatum is geen beveiligingsmaatregel tegen rechtstreeks openen via een bestandslink.
+Bestaande lessen 1–28 en hun data-study-id blijven ongewijzigd.
+Er zijn geen wijzigingen aan JavaScript, Firebase of CSS.
+Nieuwe lesbestanden gebruiken de reeds bestaande .release-pending en
+.scheduled-study indeling, zoals Romeinen 28.
+
+De Bijbelteksten zijn samengevat in eigen woorden; raadpleeg je eigen
+Bijbelvertaling voor de tekst zelf. De beschrijvingen zijn niet bedoeld
+om andere overtuigingen te veroordelen.
