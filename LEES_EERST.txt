@@ -1,19 +1,15 @@
-LICHTPUNT BELGIË – 31 LICHTPUNTJES – JANUARI 2027
+LICHTPUNT BELGIË – OUDE TESTAMENT – RONDE 1 (25 NOVEMBER 2026)
 
-KLAAR VOOR DE VOLGENDE REEKS, MAAR NOG NIET AUTOMATISCH GEPUBLICEERD.
+INHOUD: 7 nieuwe Genesis 8-lessen en 7 nieuwe Exodus 5-lessen; twee bijgewerkte overzichten.
 
-Inhoud:
-- 31 JPG-kaarten in assets: lichtpuntje-172-nl.jpg t/m lichtpuntje-202-nl.jpg.
-- 1 januari 2027 (nr. 172): feestelijke champagne/glazen bovenaan links.
-- 2–31 januari: gewone, rustige vormgeving met vaste duif en hartjes.
-- Vaste opbouw: duif, titel, eerste sierlijn met hartje, langere tekst, slotgedachte, vaste afsluiting.
-- Geen datum en geen nummer onderaan de kaart.
-- PUBLICATIEOVERZICHT.txt: nummers, titels en publicatiedatums.
-- LICHTPUNTJES_172-202_INHOUD.json: inhoud voor de latere update van de websiteplanning.
+GENESIS 8: vrijgave 30 november tot 6 december 2026 (lessen 50–56).
+EXODUS 5: vrijgave 27 november tot 3 december 2026 (lessen 29–35).
 
-BELANGRIJK:
-Deze ZIP bevat de KAARTEN EN INHOUD maar GEEN vervanging van index.html, lichtpuntjes.html of de publicatie-JavaScript.
-De januari-Lichtpuntjes zullen dus NIET vanzelf verschijnen door alleen deze ZIP te uploaden.
-Eerst de kaarten visueel goedkeuren; vervolgens koppelen we de reeks 172–202 aan de actuele websitecode en testen de datums op pc en gsm.
+BELANGRIJK: Eerst reservekopie maken van de bestaande overzichten bibliotheek-boek-genesis.html en bibliotheek-boek-exodus.html.
+Pak de ZIP uit; upload ALLE 16 HTML-bestanden naar de hoofdmap van de GitHub-repository. Dit vervangt ALLEEN de twee boekoverzichten.
 
-Voorlopig: bewaar deze ZIP als reserve. Vervang niet de bestaande decemberkaart 172 uit een oud proefpakket zonder controle.
+De 14 nieuwe lesbestanden hebben unieke nieuwe studie-ID's en gebruiken bestaande studievoortgang.js en study-notes.css. Geen oude lessen, accountscripts of Firebase bestanden overschrijven.
+
+Controleer vervolgens op pc én gsm: links, geplande vrijgavedatums, vinkjes en notities. De nieuwe lessen verschijnen in het overzicht als 'Binnenkort' totdat hun datum bereikt is.
+
+Dit is het eerste pakket van een langere voorbereiding tot 15 januari 2027. Niet het volledige pakket tot 15 januari.
